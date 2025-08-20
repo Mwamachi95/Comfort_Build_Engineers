@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
 
 
               {/* Desktop Navigation - Full */}
-              <div className="hidden md:flex items-center space-x-2 lg:space-x-3 flex-1 justify-end mr-4 lg:mr-8">
+              <div className="hidden xl:flex items-center space-x-2 lg:space-x-3 flex-1 justify-end mr-4 lg:mr-8">
                 {navigation.map((item) => {
                   if (item.hasDropdown) {
                     return (
@@ -122,7 +122,7 @@ const Navbar: React.FC = () => {
               </div>
 
               {/* Right Section - CTA Button */}
-              <div className="hidden md:block">
+              <div className="hidden xl:block">
                 <Link
                   to="/contact"
                   className="bg-primary-red text-white px-4 md:px-6 lg:px-8 py-2 md:py-3 rounded-md text-sm md:text-base font-semibold hover:bg-red-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-red focus:ring-offset-2 font-heading whitespace-nowrap"
@@ -131,8 +131,8 @@ const Navbar: React.FC = () => {
                 </Link>
               </div>
 
-              {/* Mobile & Tablet menu button */}
-              <Disclosure.Button className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-neutral-700 hover:text-primary-red hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-red">
+              {/* Mobile, Tablet & iPad menu button */}
+              <Disclosure.Button className="xl:hidden inline-flex items-center justify-center p-2 rounded-md text-neutral-700 hover:text-primary-red hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-red">
                 <span className="sr-only">Open main menu</span>
                 {open ? (
                   <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -152,7 +152,7 @@ const Navbar: React.FC = () => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Disclosure.Panel className="md:hidden border-t border-neutral-200">
+              <Disclosure.Panel className="xl:hidden border-t border-neutral-200">
                 <div className="px-4 pt-2 pb-6 space-y-1">
                   {navigation.map((item) => {
                     if (item.hasDropdown) {
