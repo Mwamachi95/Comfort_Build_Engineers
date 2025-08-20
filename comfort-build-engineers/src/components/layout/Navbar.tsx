@@ -4,12 +4,9 @@ import { Menu, Disclosure, Transition } from '@headlessui/react';
 import { 
   Bars3Icon, 
   XMarkIcon, 
-  ChevronDownIcon,
-  PhoneIcon,
-  EnvelopeIcon 
+  ChevronDownIcon
 } from '@heroicons/react/24/outline';
 import { Fragment } from 'react';
-import { contactInfo } from '../../data/contact';
 import CBEIconUrl from '../../assets/icons/logo/CBE-Icon.svg';
 
 const services = [
@@ -36,52 +33,26 @@ function classNames(...classes: string[]) {
 const Navbar: React.FC = () => {
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
-      {/* Top contact bar */}
-      <div className="bg-neutral-800 text-white">
-        <div className="section-container">
-          <div className="flex justify-between items-center py-2 text-sm">
-            <div className="flex items-center space-x-6">
-              <div className="flex items-center space-x-2">
-                <PhoneIcon className="h-4 w-4" />
-                <span>{contactInfo.phone}</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <EnvelopeIcon className="h-4 w-4" />
-                <span>{contactInfo.email}</span>
-              </div>
-            </div>
-            <div className="hidden md:block">
-              <span className="text-primary-yellow font-medium">
-                Emergency: {contactInfo.emergencyContact}
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <Disclosure as="div" className="section-container">
+      <Disclosure as="div" className="max-w-full mx-auto px-2 sm:px-4 lg:px-6">
         {({ open }) => (
           <>
-            <div className="flex justify-between items-center py-4">
+            <div className="flex items-center justify-between py-4">
               {/* Left Section - Logo */}
-              <Link to="/" className="flex items-center space-x-3">
+              <Link to="/" className="flex items-center space-x-4">
                 <img
                   src={CBEIconUrl}
                   alt="CBE Logo"
-                  className="h-10 w-10"
+                  className="h-12 w-12 sm:h-14 sm:w-14"
                 />
                 <div className="flex flex-col">
-                  <span className="text-xl font-bold font-heading text-primary-red">
+                  <span className="text-xl sm:text-2xl font-bold font-heading text-primary-red">
                     Comfort Build Engineers
-                  </span>
-                  <span className="text-xs text-neutral-500 font-medium">
-                    Professional Engineering Solutions
                   </span>
                 </div>
               </Link>
 
-              {/* Desktop Navigation - Center */}
-              <div className="hidden md:flex items-center space-x-8">
+              {/* Desktop Navigation - Pushed Right */}
+              <div className="hidden md:flex items-center space-x-4 lg:space-x-6 flex-1 justify-end mr-8">
                 {navigation.map((item) => {
                   if (item.hasDropdown) {
                     return (
