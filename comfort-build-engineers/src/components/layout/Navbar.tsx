@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
                   className="h-12 w-12 sm:h-14 sm:w-14"
                 />
                 <div className="flex flex-col">
-                  <span className="text-xl sm:text-2xl font-bold font-heading text-primary-red">
+                  <span className="text-xl sm:text-2xl font-bold font-heading text-black">
                     Comfort Build Engineers
                   </span>
                 </div>
@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
                   if (item.hasDropdown) {
                     return (
                       <Menu as="div" key={item.name} className="relative">
-                        <Menu.Button className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-neutral-700 hover:text-primary-red transition-all duration-200">
+                        <Menu.Button className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-neutral-700 hover:text-primary-red transition-all duration-200 font-heading">
                           <span>{item.name}</span>
                           <ChevronDownIcon className="h-4 w-4" />
                         </Menu.Button>
@@ -112,7 +112,7 @@ const Navbar: React.FC = () => {
                     <Link
                       key={item.name}
                       to={item.href}
-                      className="px-3 py-2 text-sm font-medium text-neutral-700 hover:text-primary-red transition-colors duration-200"
+                      className="px-3 py-2 text-sm font-medium text-neutral-700 hover:text-primary-red transition-colors duration-200 font-heading"
                     >
                       {item.name}
                     </Link>
@@ -124,7 +124,7 @@ const Navbar: React.FC = () => {
               <div className="hidden md:block">
                 <Link
                   to="/contact"
-                  className="bg-primary-red text-white px-6 py-2 rounded-md font-semibold hover:bg-red-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-red focus:ring-offset-2"
+                  className="bg-primary-red text-white px-6 py-2 rounded-md font-semibold hover:bg-red-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-red focus:ring-offset-2 font-heading"
                 >
                   Request a Quote
                 </Link>
@@ -159,7 +159,7 @@ const Navbar: React.FC = () => {
                         <div key={item.name} className="space-y-1">
                           <Link
                             to={item.href}
-                            className="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-primary-red hover:bg-neutral-50 rounded-md transition-colors duration-200"
+                            className="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-primary-red hover:bg-neutral-50 rounded-md transition-colors duration-200 font-heading"
                           >
                             {item.name}
                           </Link>
@@ -168,7 +168,7 @@ const Navbar: React.FC = () => {
                               <Link
                                 key={service.name}
                                 to={service.href}
-                                className="block px-3 py-2 text-sm text-neutral-600 hover:text-primary-red hover:bg-neutral-50 rounded-md transition-colors duration-200"
+                                className="block px-3 py-2 text-sm text-neutral-600 hover:text-primary-red hover:bg-neutral-50 rounded-md transition-colors duration-200 font-heading"
                               >
                                 {service.name}
                               </Link>
@@ -182,7 +182,7 @@ const Navbar: React.FC = () => {
                       <Link
                         key={item.name}
                         to={item.href}
-                        className="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-primary-red hover:bg-neutral-50 rounded-md transition-colors duration-200"
+                        className="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-primary-red hover:bg-neutral-50 rounded-md transition-colors duration-200 font-heading"
                       >
                         {item.name}
                       </Link>
@@ -193,7 +193,7 @@ const Navbar: React.FC = () => {
                   <div className="pt-4 border-t border-neutral-200">
                     <Link
                       to="/contact"
-                      className="block w-full text-center bg-primary-red text-white px-6 py-3 rounded-md font-semibold hover:bg-red-700 transition-colors duration-200"
+                      className="block w-full text-center bg-primary-red text-white px-6 py-3 rounded-md font-semibold hover:bg-red-700 transition-colors duration-200 font-heading"
                     >
                       Request a Quote
                     </Link>
