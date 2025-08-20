@@ -1,4 +1,4 @@
-import { ContactInfo } from '../types';
+import type { ContactInfo } from '../types';
 
 export const contactInfo: ContactInfo = {
   phone: '+254 700 123 456',
