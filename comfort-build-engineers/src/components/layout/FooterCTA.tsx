@@ -15,7 +15,7 @@ const FooterCTA: React.FC = () => {
     if (pathname === '/about') {
       return "Ready to meet the team behind your next successful project?";
     }
-    if (pathname === '/work' || pathname.startsWith('/projects')) {
+    if (pathname.startsWith('/projects')) {
       return "Planning something similar? Let's discuss your vision and requirements.";
     }
     if (pathname.startsWith('/services')) {

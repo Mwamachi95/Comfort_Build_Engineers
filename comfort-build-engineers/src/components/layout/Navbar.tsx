@@ -28,7 +28,6 @@ const projects = [
 
 const navigation = [
   { name: 'About Us', href: '/about' },
-  { name: 'Work', href: '/work' },
   { name: 'Services', href: '/services', hasDropdown: true },
   { name: 'Projects', href: '/projects', hasDropdown: true },
   { name: 'FAQs', href: '/faqs' },

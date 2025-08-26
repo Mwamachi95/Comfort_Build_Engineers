@@ -122,17 +122,6 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  to="/work"
-                  className="text-neutral-600 hover:text-neutral-800 transition-colors duration-200 text-sm relative group"
-                >
-                  <span className="relative">
-                    Work
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/projects"
                   className="text-neutral-600 hover:text-neutral-800 transition-colors duration-200 text-sm relative group"
                 >
