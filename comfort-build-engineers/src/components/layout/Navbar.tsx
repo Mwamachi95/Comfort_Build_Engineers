@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, Disclosure, Transition } from '@headlessui/react';
+import { Disclosure, Transition } from '@headlessui/react';
 import { 
   Bars3Icon, 
   XMarkIcon, 
@@ -17,28 +17,46 @@ const services = [
   { name: 'Project Management', href: '/services/project-management' },
 ];
 
+const projects = [
+  { name: 'Commercial', href: '/projects/commercial' },
+  { name: 'Design-Build', href: '/projects/design-build' },
+  { name: 'Factory Planning', href: '/projects/factory-planning' },
+  { name: 'Industrial', href: '/projects/industrial' },
+  { name: 'Project Management', href: '/projects/project-management' },
+  { name: 'Residential', href: '/projects/residential' },
+];
+
 const navigation = [
-  { name: 'Home', href: '/' },
   { name: 'About Us', href: '/about' },
+  { name: 'Work', href: '/work' },
   { name: 'Services', href: '/services', hasDropdown: true },
-  { name: 'Projects', href: '/projects' },
+  { name: 'Projects', href: '/projects', hasDropdown: true },
   { name: 'FAQs', href: '/faqs' },
   { name: 'Contact', href: '/contact' },
 ];
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
-}
-
 const Navbar: React.FC = () => {
+  const [openMobileDropdowns, setOpenMobileDropdowns] = useState<Record<string, boolean>>({});
+
+  const toggleMobileDropdown = (itemName: string) => {
+    setOpenMobileDropdowns(prev => ({
+      ...prev,
+      [itemName]: !prev[itemName]
+    }));
+  };
+
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
       <Disclosure as="div" className="max-w-full mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-        {({ open }) => (
+        {({ open, close }) => (
           <>
             <div className="flex items-center justify-between py-3 md:py-4">
               {/* Left Section - Logo */}
-              <Link to="/" className="flex items-center space-x-3 sm:space-x-4">
+              <Link 
+                to="/" 
+                onClick={() => open && close()}
+                className="flex items-center space-x-3 sm:space-x-4"
+              >
                 <img
                   src={CBEIconUrl}
                   alt="CBE Logo"
@@ -56,56 +74,39 @@ const Navbar: React.FC = () => {
               <div className="hidden xl:flex items-center space-x-2 lg:space-x-3 flex-1 justify-end mr-4 lg:mr-8">
                 {navigation.map((item) => {
                   if (item.hasDropdown) {
+                    const isServices = item.name === 'Services';
+                    const dropdownItems = isServices ? services : projects;
+                    
                     return (
-                      <Menu as="div" key={item.name} className="relative">
-                        <Menu.Button className="flex items-center space-x-1 px-2 md:px-3 py-2 text-base md:text-lg font-medium text-neutral-700 hover:text-primary-red transition-all duration-200 font-heading">
-                          <span>{item.name}</span>
-                          <ChevronDownIcon className="h-4 w-4" />
-                        </Menu.Button>
-                        <Transition
-                          as={Fragment}
-                          enter="transition ease-out duration-200"
-                          enterFrom="opacity-0 scale-95"
-                          enterTo="opacity-100 scale-100"
-                          leave="transition ease-in duration-150"
-                          leaveFrom="opacity-100 scale-100"
-                          leaveTo="opacity-0 scale-95"
+                      <div key={item.name} className="relative group">
+                        <Link
+                          to={item.href}
+                          className="flex items-center space-x-1 px-2 md:px-3 py-2 text-base md:text-lg font-medium text-neutral-700 hover:text-primary-red transition-all duration-200 font-heading"
                         >
-                          <Menu.Items className="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg border border-neutral-200 focus:outline-none z-50">
-                            <div className="py-2">
-                              <Menu.Item>
-                                {({ active }) => (
-                                  <Link
-                                    to="/services"
-                                    className={classNames(
-                                      active ? 'bg-neutral-50 text-primary-red' : 'text-neutral-700',
-                                      'block px-4 py-2 text-sm font-medium hover:text-primary-red transition-colors duration-200'
-                                    )}
-                                  >
-                                    All Services
-                                  </Link>
-                                )}
-                              </Menu.Item>
-                              <div className="border-t border-neutral-100 my-1" />
-                              {services.map((service) => (
-                                <Menu.Item key={service.name}>
-                                  {({ active }) => (
-                                    <Link
-                                      to={service.href}
-                                      className={classNames(
-                                        active ? 'bg-neutral-50 text-primary-red' : 'text-neutral-700',
-                                        'block px-4 py-2 text-sm hover:text-primary-red transition-colors duration-200'
-                                      )}
-                                    >
-                                      {service.name}
-                                    </Link>
-                                  )}
-                                </Menu.Item>
-                              ))}
-                            </div>
-                          </Menu.Items>
-                        </Transition>
-                      </Menu>
+                          <span>{item.name}</span>
+                          <ChevronDownIcon className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
+                        </Link>
+                        <div className="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg border border-neutral-200 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform scale-95 group-hover:scale-100">
+                          <div className="py-2">
+                            <Link
+                              to={item.href}
+                              className="block px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 hover:text-primary-red transition-colors duration-200"
+                            >
+                              {isServices ? 'All Services' : 'All Projects'}
+                            </Link>
+                            <div className="border-t border-neutral-100 my-1" />
+                            {dropdownItems.map((dropdownItem) => (
+                              <Link
+                                key={dropdownItem.name}
+                                to={dropdownItem.href}
+                                className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50 hover:text-primary-red transition-colors duration-200"
+                              >
+                                {dropdownItem.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
                     );
                   }
                   
@@ -152,29 +153,57 @@ const Navbar: React.FC = () => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Disclosure.Panel className="xl:hidden border-t border-neutral-200">
-                <div className="px-4 pt-2 pb-6 space-y-1">
+              <Disclosure.Panel className="xl:hidden fixed inset-0 top-[69px] sm:top-[77px] md:top-[81px] bg-white z-40 flex flex-col">
+                <div className="flex-1 px-4 pt-4 pb-6 space-y-1 overflow-y-auto">
+                  {/* Home Link */}
+                  <Link
+                    to="/"
+                    onClick={() => close()}
+                    className="block px-3 py-3 text-base sm:text-lg font-medium text-neutral-700 hover:text-primary-red hover:bg-neutral-50 rounded-md transition-colors duration-200 font-heading"
+                  >
+                    Home
+                  </Link>
+                  
                   {navigation.map((item) => {
                     if (item.hasDropdown) {
+                      const isServices = item.name === 'Services';
+                      const dropdownItems = isServices ? services : projects;
+                      const isOpen = openMobileDropdowns[item.name] || false;
+                      
                       return (
                         <div key={item.name} className="space-y-1">
-                          <Link
-                            to={item.href}
-                            className="block px-3 py-3 text-base sm:text-lg font-medium text-neutral-700 hover:text-primary-red hover:bg-neutral-50 rounded-md transition-colors duration-200 font-heading"
-                          >
-                            {item.name}
-                          </Link>
-                          <div className="pl-6 space-y-1">
-                            {services.map((service) => (
-                              <Link
-                                key={service.name}
-                                to={service.href}
-                                className="block px-3 py-2 text-sm sm:text-base text-neutral-600 hover:text-primary-red hover:bg-neutral-50 rounded-md transition-colors duration-200 font-heading"
-                              >
-                                {service.name}
-                              </Link>
-                            ))}
+                          <div className="flex items-center justify-between">
+                            <Link
+                              to={item.href}
+                              onClick={() => close()}
+                              className="flex-1 block px-3 py-3 text-base sm:text-lg font-medium text-neutral-700 hover:text-primary-red hover:bg-neutral-50 rounded-md transition-colors duration-200 font-heading"
+                            >
+                              {item.name}
+                            </Link>
+                            <button
+                              onClick={() => toggleMobileDropdown(item.name)}
+                              className="p-2 text-neutral-700 hover:text-primary-red transition-colors duration-200"
+                              aria-label={`Toggle ${item.name} dropdown`}
+                            >
+                              <ChevronDownIcon 
+                                className={`h-5 w-5 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+                              />
+                            </button>
                           </div>
+                          {isOpen && (
+                            <div className="pl-6 space-y-1">
+                              {dropdownItems.map((dropdownItem) => (
+                                <Link
+                                  key={dropdownItem.name}
+                                  to={dropdownItem.href}
+                                  onClick={() => close()}
+                                  className="block px-3 py-2 text-sm sm:text-base text-neutral-600 hover:text-primary-red hover:bg-neutral-50 rounded-md transition-colors duration-200 font-heading"
+                                >
+                                  {dropdownItem.name}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
                         </div>
                       );
                     }
@@ -183,6 +212,7 @@ const Navbar: React.FC = () => {
                       <Link
                         key={item.name}
                         to={item.href}
+                        onClick={() => close()}
                         className="block px-3 py-3 text-base sm:text-lg font-medium text-neutral-700 hover:text-primary-red hover:bg-neutral-50 rounded-md transition-colors duration-200 font-heading"
                       >
                         {item.name}
@@ -190,14 +220,47 @@ const Navbar: React.FC = () => {
                     );
                   })}
                   
-                  {/* Mobile CTA Button */}
-                  <div className="pt-4 border-t border-neutral-200">
+                  {/* Mobile CTA Button - Right after Contact */}
+                  <div className="pt-4">
                     <Link
                       to="/contact"
+                      onClick={() => close()}
                       className="block w-full text-center bg-primary-red text-white px-6 py-3 sm:py-4 rounded-md text-base sm:text-lg font-semibold hover:bg-red-700 transition-colors duration-200 font-heading"
                     >
                       Request a Quote
                     </Link>
+                  </div>
+                </div>
+                
+                {/* Social Media Icons - Bottom */}
+                <div className="px-4 pb-6">
+                  
+                  {/* Social Media Icons */}
+                  <div className="border-t border-neutral-200 pt-6">
+                    <div className="flex justify-center space-x-6">
+                      <a
+                        href="https://linkedin.com/company/comfort-build-engineers"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-neutral-600 hover:text-primary-red transition-colors duration-200"
+                        aria-label="LinkedIn"
+                      >
+                        <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                      </a>
+                      <a
+                        href="https://facebook.com/comfortbuildengineers"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-neutral-600 hover:text-primary-red transition-colors duration-200"
+                        aria-label="Facebook"
+                      >
+                        <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </Disclosure.Panel>
