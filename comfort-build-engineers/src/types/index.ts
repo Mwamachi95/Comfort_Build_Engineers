@@ -1,9 +1,19 @@
+export interface SegmentCard {
+  id: string;
+  title: string;
+  description: string;
+  position: { row: number; col: number };
+}
+
 export interface Service {
   id: string;
   name: string;
+  title: string;
   description: string;
   icon: string;
   slug: string;
+  color: string;
+  segments: SegmentCard[];
 }
 
 export interface Project {

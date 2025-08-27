@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Disclosure, Transition } from '@headlessui/react';
 import { 
   Bars3Icon, 
@@ -10,11 +10,12 @@ import { Fragment } from 'react';
 import CBEIconUrl from '../../assets/icons/logo/CBE-Icon.svg';
 
 const services = [
-  { name: 'Mechanical', href: '/services/mechanical' },
-  { name: 'Electrical', href: '/services/electrical' },
-  { name: 'Plumbing', href: '/services/plumbing' },
-  { name: 'Factory Planning', href: '/services/factory-planning' },
-  { name: 'Project Management', href: '/services/project-management' },
+  { name: 'Mechanical', href: '/services#mechanical' },
+  { name: 'Plumbing', href: '/services#plumbing' },
+  { name: 'Electrical', href: '/services#electrical' },
+  { name: 'Factory Planning', href: '/services#factory-planning' },
+  { name: 'Project Management', href: '/services#project-management' },
+  { name: 'Design & Build', href: '/services#design-build' },
 ];
 
 const projects = [
@@ -36,6 +37,61 @@ const navigation = [
 
 const Navbar: React.FC = () => {
   const [openMobileDropdowns, setOpenMobileDropdowns] = useState<Record<string, boolean>>({});
+  const location = useLocation();
+
+  // Get page-specific CTA color
+  const getCtaColor = () => {
+    if (location.pathname === '/') {
+      return {
+        bg: '#A43D39',
+        hover: '#8B3530',
+        ring: '#A43D39'
+      };
+    }
+    if (location.pathname === '/contact') {
+      return {
+        bg: '#A67458',
+        hover: '#8F6049',
+        ring: '#A67458'
+      };
+    }
+    if (location.pathname === '/about') {
+      return {
+        bg: '#D9A91A',
+        hover: '#B8901C',
+        ring: '#D9A91A'
+      };
+    }
+    if (location.pathname.startsWith('/projects')) {
+      return {
+        bg: '#5A7E8C',
+        hover: '#4A6B75',
+        ring: '#5A7E8C'
+      };
+    }
+    if (location.pathname === '/faqs') {
+      return {
+        bg: '#808C27',
+        hover: '#6B7521',
+        ring: '#808C27'
+      };
+    }
+    if (location.pathname === '/services' || location.pathname.startsWith('/services#')) {
+      return {
+        bg: '#82AD9C',
+        hover: '#6B9688',
+        ring: '#82AD9C'
+      };
+    }
+    // Default colors (Home page fallback)
+    return {
+      bg: '#A43D39',
+      hover: '#8B3530',
+      ring: '#A43D39'
+    };
+  };
+
+  const ctaColors = getCtaColor();
 
   const toggleMobileDropdown = (itemName: string) => {
     setOpenMobileDropdowns(prev => ({
@@ -125,7 +181,21 @@ const Navbar: React.FC = () => {
               <div className="hidden xl:block">
                 <Link
                   to="/contact"
-                  className="bg-primary-red text-white px-4 md:px-6 lg:px-8 py-2 md:py-3 rounded-md text-sm md:text-base font-semibold hover:bg-red-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-red focus:ring-offset-2 font-heading whitespace-nowrap"
+                  className="text-white px-4 md:px-6 lg:px-8 py-2 md:py-3 rounded-md text-sm md:text-base font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 font-heading whitespace-nowrap"
+                  style={{
+                    backgroundColor: typeof ctaColors.bg === 'string' ? ctaColors.bg : undefined,
+                    focusRingColor: ctaColors.ring
+                  }}
+                  onMouseEnter={(e) => {
+                    if (typeof ctaColors.hover === 'string') {
+                      (e.target as HTMLElement).style.backgroundColor = ctaColors.hover;
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (typeof ctaColors.bg === 'string') {
+                      (e.target as HTMLElement).style.backgroundColor = ctaColors.bg;
+                    }
+                  }}
                 >
                   Request a Quote
                 </Link>
@@ -224,7 +294,20 @@ const Navbar: React.FC = () => {
                     <Link
                       to="/contact"
                       onClick={() => close()}
-                      className="block w-full text-center bg-primary-red text-white px-6 py-3 sm:py-4 rounded-md text-base sm:text-lg font-semibold hover:bg-red-700 transition-colors duration-200 font-heading"
+                      className="block w-full text-center text-white px-6 py-3 sm:py-4 rounded-md text-base sm:text-lg font-semibold transition-colors duration-200 font-heading"
+                      style={{
+                        backgroundColor: typeof ctaColors.bg === 'string' ? ctaColors.bg : undefined
+                      }}
+                      onMouseEnter={(e) => {
+                        if (typeof ctaColors.hover === 'string') {
+                          (e.target as HTMLElement).style.backgroundColor = ctaColors.hover;
+                        }
+                      }}
+                      onMouseLeave={(e) => {
+                        if (typeof ctaColors.bg === 'string') {
+                          (e.target as HTMLElement).style.backgroundColor = ctaColors.bg;
+                        }
+                      }}
                     >
                       Request a Quote
                     </Link>

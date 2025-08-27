@@ -7,6 +7,85 @@ const FooterCTA: React.FC = () => {
   const [copied, setCopied] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
+  // Get page-specific background color
+  const getBackgroundColor = () => {
+    if (location.pathname === '/') {
+      return '#A43D39'; // Home page color
+    }
+    if (location.pathname === '/contact') {
+      return '#A67458'; // Contact page color
+    }
+    if (location.pathname === '/about') {
+      return '#D9A91A'; // Golden yellow for About Us
+    }
+    if (location.pathname.startsWith('/projects')) {
+      return '#5A7E8C'; // Green blue for Projects
+    }
+    if (location.pathname === '/faqs') {
+      return '#808C27'; // Green yellow for FAQs
+    }
+    if (location.pathname === '/services' || location.pathname.startsWith('/services#')) {
+      return '#82AD9C'; // Green for Services
+    }
+    // Default color (Home page fallback)
+    return '#A43D39';
+  };
+
+  // Get page-specific button colors
+  const getButtonColors = () => {
+    if (location.pathname === '/') {
+      return {
+        default: '#8B3530',
+        hover: '#A43D39',
+        copied: '#F2F2F2'
+      };
+    }
+    if (location.pathname === '/contact') {
+      return {
+        default: '#8F6049',
+        hover: '#A67458',
+        copied: '#F2F2F2'
+      };
+    }
+    if (location.pathname === '/about') {
+      return {
+        default: '#B8901C',
+        hover: '#D9A91A',
+        copied: '#F2F2F2'
+      };
+    }
+    if (location.pathname.startsWith('/projects')) {
+      return {
+        default: '#4A6B75',
+        hover: '#759BB2',
+        copied: '#F2F2F2'
+      };
+    }
+    if (location.pathname === '/faqs') {
+      return {
+        default: '#6B7521',
+        hover: '#A3B03F',
+        copied: '#F2F2F2'
+      };
+    }
+    if (location.pathname === '/services' || location.pathname.startsWith('/services#')) {
+      return {
+        default: '#6B9688',
+        hover: '#A8C4B8',
+        copied: '#F2F2F2'
+      };
+    }
+    // Default colors (Home page fallback)
+    return {
+      default: '#8B3530',
+      hover: '#A43D39',
+      copied: '#F2F2F2'
+    };
+  };
+
+  const backgroundColors = getBackgroundColor();
+  const buttonColors = getButtonColors();
+
   const getPageMessage = (pathname: string): string => {
     // Handle exact matches and patterns
     if (pathname === '/') {
@@ -59,7 +138,7 @@ const FooterCTA: React.FC = () => {
       <div className="section-container">
         <div 
           className="rounded-2xl py-12 md:py-16"
-          style={{ backgroundColor: '#752520' }}
+          style={{ backgroundColor: backgroundColors }}
         >
           <div className="max-w-4xl mx-auto text-center space-y-6 px-6 md:px-8">
           {/* Headline */}
@@ -80,7 +159,7 @@ const FooterCTA: React.FC = () => {
               onMouseLeave={() => setIsHovered(false)}
               className="inline-flex items-center justify-center space-x-3 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 font-heading"
               style={{
-                backgroundColor: copied ? '#F2F2F2' : (isHovered ? '#F7948D' : '#A63C3C'),
+                backgroundColor: copied ? buttonColors.copied : (isHovered ? buttonColors.hover : buttonColors.default),
                 color: copied ? '#333333' : (isHovered ? '#333333' : 'white'),
                 width: '280px',
                 height: '60px'
