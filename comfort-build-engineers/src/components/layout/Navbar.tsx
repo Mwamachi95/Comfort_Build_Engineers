@@ -326,7 +326,12 @@ const Navbar: React.FC = () => {
                             </Link>
                             <button
                               onClick={() => toggleMobileDropdown(item.name)}
-                              className="p-2 text-neutral-700 hover:text-primary-red transition-colors duration-200"
+                              className="p-2 transition-colors duration-200"
+                              style={{
+                                color: getLinkColor(item.href)
+                              }}
+                              onMouseEnter={() => setHoveredLink(item.href)}
+                              onMouseLeave={() => setHoveredLink(null)}
                               aria-label={`Toggle ${item.name} dropdown`}
                             >
                               <ChevronDownIcon 
