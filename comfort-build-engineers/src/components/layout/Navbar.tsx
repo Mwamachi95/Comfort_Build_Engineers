@@ -39,6 +39,16 @@ const Navbar: React.FC = () => {
   const [openMobileDropdowns, setOpenMobileDropdowns] = useState<Record<string, boolean>>({});
   const location = useLocation();
 
+  // Get page-specific hover color for navigation links
+  const getPageHoverColor = (href: string) => {
+    if (href === '/about') return '#D9A91A';
+    if (href === '/services' || href.startsWith('/services#')) return '#82AD9C';
+    if (href === '/projects' || href.startsWith('/projects/')) return '#5A7E8C';
+    if (href === '/faqs') return '#808C27';
+    if (href === '/contact') return '#A67458';
+    return '#A43D39'; // Default home color
+  };
+
   // Get page-specific CTA color
   const getCtaColor = () => {
     if (location.pathname === '/') {
@@ -136,7 +146,16 @@ const Navbar: React.FC = () => {
                       <div key={item.name} className="relative group">
                         <Link
                           to={item.href}
-                          className="flex items-center space-x-1 px-2 md:px-3 py-2 text-base md:text-lg font-medium text-neutral-700 hover:text-primary-red transition-all duration-200 font-heading"
+                          className="flex items-center space-x-1 px-2 md:px-3 py-2 text-base md:text-lg font-medium text-neutral-700 transition-all duration-200 font-heading"
+                          style={{
+                            ['--hover-color' as any]: getPageHoverColor(item.href)
+                          }}
+                          onMouseEnter={(e) => {
+                            (e.target as HTMLElement).style.color = getPageHoverColor(item.href);
+                          }}
+                          onMouseLeave={(e) => {
+                            (e.target as HTMLElement).style.color = '';
+                          }}
                         >
                           <span>{item.name}</span>
                           <ChevronDownIcon className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
@@ -145,7 +164,13 @@ const Navbar: React.FC = () => {
                           <div className="py-2">
                             <Link
                               to={item.href}
-                              className="block px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 hover:text-primary-red transition-colors duration-200"
+                              className="block px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 transition-colors duration-200"
+                              onMouseEnter={(e) => {
+                                (e.target as HTMLElement).style.color = getPageHoverColor(item.href);
+                              }}
+                              onMouseLeave={(e) => {
+                                (e.target as HTMLElement).style.color = '';
+                              }}
                             >
                               {isServices ? 'All Services' : 'All Projects'}
                             </Link>
@@ -154,7 +179,13 @@ const Navbar: React.FC = () => {
                               <Link
                                 key={dropdownItem.name}
                                 to={dropdownItem.href}
-                                className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50 hover:text-primary-red transition-colors duration-200"
+                                className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50 transition-colors duration-200"
+                                onMouseEnter={(e) => {
+                                  (e.target as HTMLElement).style.color = getPageHoverColor(dropdownItem.href);
+                                }}
+                                onMouseLeave={(e) => {
+                                  (e.target as HTMLElement).style.color = '';
+                                }}
                               >
                                 {dropdownItem.name}
                               </Link>
@@ -169,7 +200,13 @@ const Navbar: React.FC = () => {
                     <Link
                       key={item.name}
                       to={item.href}
-                      className="px-2 md:px-3 py-2 text-base md:text-lg font-medium text-neutral-700 hover:text-primary-red transition-colors duration-200 font-heading"
+                      className="px-2 md:px-3 py-2 text-base md:text-lg font-medium text-neutral-700 transition-colors duration-200 font-heading"
+                      onMouseEnter={(e) => {
+                        (e.target as HTMLElement).style.color = getPageHoverColor(item.href);
+                      }}
+                      onMouseLeave={(e) => {
+                        (e.target as HTMLElement).style.color = '';
+                      }}
                     >
                       {item.name}
                     </Link>
@@ -228,7 +265,13 @@ const Navbar: React.FC = () => {
                   <Link
                     to="/"
                     onClick={() => close()}
-                    className="block px-3 py-3 text-base sm:text-lg font-medium text-neutral-700 hover:text-primary-red hover:bg-neutral-50 rounded-md transition-colors duration-200 font-heading"
+                    className="block px-3 py-3 text-base sm:text-lg font-medium text-neutral-700 hover:bg-neutral-50 rounded-md transition-colors duration-200 font-heading"
+                    onMouseEnter={(e) => {
+                      (e.target as HTMLElement).style.color = getPageHoverColor('/');
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.target as HTMLElement).style.color = '';
+                    }}
                   >
                     Home
                   </Link>
@@ -245,7 +288,13 @@ const Navbar: React.FC = () => {
                             <Link
                               to={item.href}
                               onClick={() => close()}
-                              className="flex-1 block px-3 py-3 text-base sm:text-lg font-medium text-neutral-700 hover:text-primary-red hover:bg-neutral-50 rounded-md transition-colors duration-200 font-heading"
+                              className="flex-1 block px-3 py-3 text-base sm:text-lg font-medium text-neutral-700 hover:bg-neutral-50 rounded-md transition-colors duration-200 font-heading"
+                              onMouseEnter={(e) => {
+                                (e.target as HTMLElement).style.color = getPageHoverColor(item.href);
+                              }}
+                              onMouseLeave={(e) => {
+                                (e.target as HTMLElement).style.color = '';
+                              }}
                             >
                               {item.name}
                             </Link>
@@ -266,7 +315,13 @@ const Navbar: React.FC = () => {
                                   key={dropdownItem.name}
                                   to={dropdownItem.href}
                                   onClick={() => close()}
-                                  className="block px-3 py-2 text-sm sm:text-base text-neutral-600 hover:text-primary-red hover:bg-neutral-50 rounded-md transition-colors duration-200 font-heading"
+                                  className="block px-3 py-2 text-sm sm:text-base text-neutral-600 hover:bg-neutral-50 rounded-md transition-colors duration-200 font-heading"
+                                  onMouseEnter={(e) => {
+                                    (e.target as HTMLElement).style.color = getPageHoverColor(dropdownItem.href);
+                                  }}
+                                  onMouseLeave={(e) => {
+                                    (e.target as HTMLElement).style.color = '';
+                                  }}
                                 >
                                   {dropdownItem.name}
                                 </Link>
@@ -282,7 +337,13 @@ const Navbar: React.FC = () => {
                         key={item.name}
                         to={item.href}
                         onClick={() => close()}
-                        className="block px-3 py-3 text-base sm:text-lg font-medium text-neutral-700 hover:text-primary-red hover:bg-neutral-50 rounded-md transition-colors duration-200 font-heading"
+                        className="block px-3 py-3 text-base sm:text-lg font-medium text-neutral-700 hover:bg-neutral-50 rounded-md transition-colors duration-200 font-heading"
+                        onMouseEnter={(e) => {
+                          (e.target as HTMLElement).style.color = getPageHoverColor(item.href);
+                        }}
+                        onMouseLeave={(e) => {
+                          (e.target as HTMLElement).style.color = '';
+                        }}
                       >
                         {item.name}
                       </Link>
