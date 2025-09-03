@@ -249,8 +249,8 @@ const Navbar: React.FC = () => {
                   className="text-white px-4 md:px-6 lg:px-8 py-2 md:py-3 rounded-md text-sm md:text-base font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 font-heading whitespace-nowrap"
                   style={{
                     backgroundColor: typeof ctaColors.bg === 'string' ? ctaColors.bg : undefined,
-                    focusRingColor: ctaColors.ring
-                  }}
+                    '--tw-ring-color': ctaColors.ring
+                  } as React.CSSProperties}
                   onMouseEnter={(e) => {
                     if (typeof ctaColors.hover === 'string') {
                       (e.target as HTMLElement).style.backgroundColor = ctaColors.hover;
