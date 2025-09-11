@@ -187,3 +187,90 @@ Create a clean, professional hero section that establishes trust and credibility
 - Support multiple language considerations if needed
 
 Create a polished, professional hero section that serves as an effective introduction to Comfort Build Engineers' capabilities and establishes credibility with potential clients from the first impression.
+
+# Our Values Section for Comfort Build Engineers
+
+## Overview
+
+Create a React component called `OurValues` that showcases Comfort Build Engineers' core values in a professional 3-column layout. This component will be positioned after the `CompanyBackgroundText` component on the About page.
+
+## Content Requirements
+
+### Main Heading
+
+"Engineering Excellence Through Core Values"
+
+### Body Text (Left-aligned)
+
+"At Comfort Build Engineers, we are guided by three fundamental principles that define our approach to every project. These values ensure we deliver exceptional building services solutions while maintaining the highest standards of professionalism and client satisfaction."
+
+### Core Values (3 Columns)
+
+#### Value 1: Competitive
+
+**Icon**: Reference from `assets/images/core-values/` folder (appropriate competitive/excellence icon)
+**Description**: "We maintain competitive edge through innovative MEP solutions, cutting-edge technology, and cost-effective project delivery. Our team continuously evolves to meet industry demands while providing exceptional value to our clients."
+
+#### Value 2: Collaborative
+
+**Icon**: Reference from `assets/images/core-values/` folder (appropriate collaboration/partnership icon)
+**Description**: "We work closely with architects, interior designers, and stakeholders to create seamless building services integration. Our collaborative approach ensures every project meets functional requirements and exceeds client expectations."
+
+#### Value 3: Consistent
+
+**Icon**: Reference from `assets/images/core-values/` folder (appropriate consistency/reliability icon)
+**Description**: "We deliver reliable, high-quality engineering solutions with consistent standards across all projects. Our commitment to precision and timely delivery has established us as Kenya's trusted building services partner."
+
+## Design Specifications
+
+### Layout
+
+- White background (`bg-white`)
+- Section padding consistent with other page sections
+- Left-aligned heading and body text (not centered)
+- 3-column grid layout for values on desktop
+- Responsive stacking on mobile devices
+
+### Typography
+
+- Use established design system fonts (Inter for body text, IBM Plex Sans for headings)
+- Proper hierarchy with heading, body text, and value descriptions
+- Readable font sizes and line spacing
+
+### Icon Styling
+
+- Icons should be imported from `assets/images/core-values/` folder
+- Icon background color: `#D9A91A` (golden/yellow accent)
+- Circular background for icons
+- Appropriate icon sizing for visual balance
+- Icons should be centered above each value title
+
+### Value Cards
+
+- Clean, minimal card design
+- Proper spacing between icon, title, and description
+- Consistent card heights across all three columns
+- Subtle visual separation without heavy borders
+
+### Responsive Design
+
+- Desktop: 3-column grid layout
+- Tablet: 2-column with third item centered or 3-column if space allows
+- Mobile: Single column stacked layout
+- Proper spacing and alignment across all breakpoints
+
+## Technical Requirements
+
+- React functional component with TypeScript
+- Tailwind CSS for styling
+- Proper image imports from the specified assets folder
+- Follow existing project's design patterns and conventions
+- Ensure accessibility with proper alt text for icons
+- Component should integrate seamlessly after CompanyBackgroundText
+
+## Key Design Notes
+
+- Unlike the reference image which has centered text, this implementation should have left-aligned heading and body text
+- The icon background color `#D9A91A` provides a distinctive accent that complements the CBE color scheme
+- Focus on clean, professional presentation that reflects engineering precision
+- Maintain visual consistency with other About page sections
