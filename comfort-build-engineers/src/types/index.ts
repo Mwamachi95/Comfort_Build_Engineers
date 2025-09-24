@@ -76,3 +76,11 @@ export interface ContactInfo {
   emergencyContact: string;
   officeHours: string;
 }
+
+export interface ContactFormData {
+  firstName: string;
+  lastName: string;
+  workEmail: string;
+  companyName: string;
+  message: string;
+}

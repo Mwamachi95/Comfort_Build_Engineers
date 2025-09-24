@@ -1,13 +1,304 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { motion } from 'framer-motion';
+import { 
+  PhoneIcon, 
+  EnvelopeIcon, 
+  MapPinIcon, 
+  ClockIcon 
+} from '@heroicons/react/24/outline';
+import { contactFormSchema, type ContactFormSchema } from '../utils/contactValidation';
+import { contactInfo } from '../data/contact';
 
 const Contact: React.FC = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<ContactFormSchema>({
+    resolver: zodResolver(contactFormSchema),
+  });
+
+  const onSubmit = async (data: ContactFormSchema) => {
+    try {
+      // TODO: Implement actual form submission logic
+      console.log('Form submitted:', data);
+      
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Reset form on successful submission
+      reset();
+      
+      // TODO: Show success message to user
+      alert('Thank you for your message! We will get back to you soon.');
+    } catch (error) {
+      console.error('Form submission error:', error);
+      // TODO: Show error message to user
+      alert('There was an error submitting your message. Please try again.');
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-neutral-50">
-      <div className="section-container py-16">
-        <h1 className="text-4xl font-bold text-neutral-800 mb-8">Contact Us</h1>
-        <p className="text-lg text-neutral-600">
-          Get in touch with our team of professional engineers.
-        </p>
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+          {/* Left Column - Contact Information */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="lg:pr-8"
+          >
+            {/* "CONTACT US" Label */}
+            <motion.div 
+              className="mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <span 
+                className="text-sm font-semibold tracking-wider uppercase font-heading"
+                style={{ color: '#A67458' }}
+              >
+                Contact Us
+              </span>
+            </motion.div>
+
+            {/* Main Heading */}
+            <motion.h1 
+              className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-neutral-900 mb-6 font-heading"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              Get in Touch.{' '}
+              <span style={{ color: '#A67458' }}>
+                Let's Build Together.
+              </span>
+            </motion.h1>
+
+            {/* Introduction Paragraph */}
+            <motion.p 
+              className="text-base md:text-lg lg:text-xl text-neutral-600 leading-relaxed max-w-lg mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
+              Reach out to our team to discuss your mechanical, electrical, and plumbing engineering needs. Learn how Comfort Build Engineers can support your project's success with reliable, dependable, and client-focused solutions.
+            </motion.p>
+
+            {/* Contact Details */}
+            <motion.div 
+              className="space-y-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
+              {/* Address */}
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <MapPinIcon className="h-6 w-6 text-neutral-600 mt-1" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-neutral-900 mb-2 font-heading">Address</h3>
+                  <p className="text-neutral-700 leading-relaxed">
+                    Comfort Build Engineers Limited<br />
+                    {contactInfo.address}
+                  </p>
+                </div>
+              </div>
+
+              {/* Phone */}
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <PhoneIcon className="h-6 w-6 text-neutral-600 mt-1" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-neutral-900 mb-2 font-heading">Phone</h3>
+                  <a 
+                    href={`tel:${contactInfo.phone}`}
+                    className="text-neutral-700 transition-colors duration-200"
+                    style={{ 
+                      color: 'inherit'
+                    }}
+                    onMouseEnter={(e) => {
+                      (e.target as HTMLElement).style.color = '#A67458';
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.target as HTMLElement).style.color = 'inherit';
+                    }}
+                  >
+                    {contactInfo.phone}
+                  </a>
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <EnvelopeIcon className="h-6 w-6 text-neutral-600 mt-1" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-neutral-900 mb-2 font-heading">Email</h3>
+                  <a 
+                    href={`mailto:${contactInfo.email}`}
+                    className="text-neutral-700 transition-colors duration-200"
+                    style={{ 
+                      color: 'inherit'
+                    }}
+                    onMouseEnter={(e) => {
+                      (e.target as HTMLElement).style.color = '#A67458';
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.target as HTMLElement).style.color = 'inherit';
+                    }}
+                  >
+                    {contactInfo.email}
+                  </a>
+                </div>
+              </div>
+
+              {/* Office Hours */}
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <ClockIcon className="h-6 w-6 text-neutral-600 mt-1" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-neutral-900 mb-2 font-heading">Office Hours</h3>
+                  <p className="text-neutral-700">
+                    {contactInfo.officeHours}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Right Column - Contact Form */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="bg-neutral-50 rounded-xl p-8 lg:p-10"
+          >
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+              {/* Name Fields Row */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {/* First Name */}
+                <div>
+                  <label htmlFor="firstName" className="block text-sm font-semibold text-neutral-900 mb-2 font-heading">
+                    First name *
+                  </label>
+                  <input
+                    {...register('firstName')}
+                    type="text"
+                    id="firstName"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-md focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 focus:border-transparent transition-colors duration-200 bg-white"
+                    placeholder="Enter your first name"
+                  />
+                  {errors.firstName && (
+                    <p className="mt-1 text-sm text-red-600">{errors.firstName.message}</p>
+                  )}
+                </div>
+
+                {/* Last Name */}
+                <div>
+                  <label htmlFor="lastName" className="block text-sm font-semibold text-neutral-900 mb-2 font-heading">
+                    Last name *
+                  </label>
+                  <input
+                    {...register('lastName')}
+                    type="text"
+                    id="lastName"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-md focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 focus:border-transparent transition-colors duration-200 bg-white"
+                    placeholder="Enter your last name"
+                  />
+                  {errors.lastName && (
+                    <p className="mt-1 text-sm text-red-600">{errors.lastName.message}</p>
+                  )}
+                </div>
+              </div>
+
+              {/* Work Email */}
+              <div>
+                <label htmlFor="workEmail" className="block text-sm font-semibold text-neutral-900 mb-2 font-heading">
+                  Work email *
+                </label>
+                <input
+                  {...register('workEmail')}
+                  type="email"
+                  id="workEmail"
+                  className="w-full px-4 py-3 border border-neutral-300 rounded-md focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 focus:border-transparent transition-colors duration-200 bg-white"
+                  placeholder="Enter your work email"
+                />
+                {errors.workEmail && (
+                  <p className="mt-1 text-sm text-red-600">{errors.workEmail.message}</p>
+                )}
+              </div>
+
+              {/* Company Name */}
+              <div>
+                <label htmlFor="companyName" className="block text-sm font-semibold text-neutral-900 mb-2 font-heading">
+                  Company name *
+                </label>
+                <input
+                  {...register('companyName')}
+                  type="text"
+                  id="companyName"
+                  className="w-full px-4 py-3 border border-neutral-300 rounded-md focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 focus:border-transparent transition-colors duration-200 bg-white"
+                  placeholder="Enter your company name"
+                />
+                {errors.companyName && (
+                  <p className="mt-1 text-sm text-red-600">{errors.companyName.message}</p>
+                )}
+              </div>
+
+              {/* Message */}
+              <div>
+                <label htmlFor="message" className="block text-sm font-semibold text-neutral-900 mb-2 font-heading">
+                  What can we do for you?
+                </label>
+                <textarea
+                  {...register('message')}
+                  id="message"
+                  rows={4}
+                  className="w-full px-4 py-3 border border-neutral-300 rounded-md focus:ring-2 focus:ring-offset-2 focus:ring-neutral-400 focus:border-transparent transition-colors duration-200 bg-white resize-vertical"
+                  placeholder="Tell us about your project or how we can help..."
+                />
+                {errors.message && (
+                  <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>
+                )}
+              </div>
+
+              {/* Submit Button */}
+              <div className="pt-4">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full px-6 py-3 text-base font-semibold text-white rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed font-heading"
+                  style={{ 
+                    backgroundColor: '#A67458',
+                    '--tw-ring-color': '#A67458'
+                  } as React.CSSProperties}
+                  onMouseEnter={(e) => {
+                    if (!isSubmitting) {
+                      (e.target as HTMLElement).style.backgroundColor = '#8F6147';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!isSubmitting) {
+                      (e.target as HTMLElement).style.backgroundColor = '#A67458';
+                    }
+                  }}
+                >
+                  {isSubmitting ? 'Submitting...' : 'Submit'}
+                </button>
+              </div>
+            </form>
+          </motion.div>
+        </div>
       </div>
     </div>
   );
