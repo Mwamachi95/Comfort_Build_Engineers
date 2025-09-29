@@ -36,49 +36,49 @@ const FooterCTA: React.FC = () => {
     if (location.pathname === '/') {
       return {
         default: '#8B3530',
-        hover: '#A43D39',
+        hover: '#5A1F1C', // Much darker red for better contrast
         copied: '#F2F2F2'
       };
     }
     if (location.pathname === '/contact') {
       return {
         default: '#8F6049',
-        hover: '#A67458',
+        hover: '#5D3F2F', // Much darker brown for better contrast
         copied: '#F2F2F2'
       };
     }
     if (location.pathname === '/about') {
       return {
         default: '#B8901C',
-        hover: '#D9A91A',
+        hover: '#7A5E12', // Much darker yellow for better contrast
         copied: '#F2F2F2'
       };
     }
     if (location.pathname.startsWith('/projects') || location.pathname.startsWith('/project/')) {
       return {
         default: '#4A6B75',
-        hover: '#759BB2',
+        hover: '#2F424A', // Much darker blue-green for better contrast
         copied: '#F2F2F2'
       };
     }
     if (location.pathname === '/faqs') {
       return {
         default: '#6B7521',
-        hover: '#A3B03F',
+        hover: '#434B15', // Much darker green-yellow for better contrast
         copied: '#F2F2F2'
       };
     }
     if (location.pathname === '/services' || location.pathname.startsWith('/services#')) {
       return {
         default: '#6B9688',
-        hover: '#A8C4B8',
+        hover: '#446157', // Much darker green for better contrast
         copied: '#F2F2F2'
       };
     }
     // Default colors (Home page fallback)
     return {
       default: '#8B3530',
-      hover: '#A43D39',
+      hover: '#5A1F1C', // Much darker red for better contrast
       copied: '#F2F2F2'
     };
   };
@@ -160,7 +160,7 @@ const FooterCTA: React.FC = () => {
               className="inline-flex items-center justify-center space-x-3 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 font-heading"
               style={{
                 backgroundColor: copied ? buttonColors.copied : (isHovered ? buttonColors.hover : buttonColors.default),
-                color: copied ? '#333333' : (isHovered ? '#333333' : 'white'),
+                color: copied ? '#333333' : 'white',
                 width: '280px',
                 height: '60px'
               }}
