@@ -18,7 +18,7 @@ const FooterCTA: React.FC = () => {
     if (location.pathname === '/about') {
       return '#D9A91A'; // Golden yellow for About Us
     }
-    if (location.pathname.startsWith('/projects')) {
+    if (location.pathname.startsWith('/projects') || location.pathname.startsWith('/project/')) {
       return '#5A7E8C'; // Green blue for Projects
     }
     if (location.pathname === '/faqs') {
@@ -54,7 +54,7 @@ const FooterCTA: React.FC = () => {
         copied: '#F2F2F2'
       };
     }
-    if (location.pathname.startsWith('/projects')) {
+    if (location.pathname.startsWith('/projects') || location.pathname.startsWith('/project/')) {
       return {
         default: '#4A6B75',
         hover: '#759BB2',

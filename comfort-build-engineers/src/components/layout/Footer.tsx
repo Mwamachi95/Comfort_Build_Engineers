@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
     if (location.pathname === '/about') {
       return '#D9A91A'; // Golden yellow
     }
-    if (location.pathname.startsWith('/projects')) {
+    if (location.pathname.startsWith('/projects') || location.pathname.startsWith('/project/')) {
       return '#5A7E8C'; // Green blue
     }
     if (location.pathname === '/faqs') {

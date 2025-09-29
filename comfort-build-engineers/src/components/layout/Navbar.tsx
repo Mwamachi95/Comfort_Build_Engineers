@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
   const getPageHoverColor = (href: string) => {
     if (href === '/about') return '#D9A91A';
     if (href === '/services' || href.startsWith('/services#')) return '#82AD9C';
-    if (href === '/projects' || href.startsWith('/projects/')) return '#5A7E8C';
+    if (href === '/projects' || href.startsWith('/projects/') || href.startsWith('/project/')) return '#5A7E8C';
     if (href === '/faqs') return '#808C27';
     if (href === '/contact') return '#A67458';
     return '#A43D39'; // Default home color
@@ -107,7 +107,7 @@ const Navbar: React.FC = () => {
         ring: '#D9A91A'
       };
     }
-    if (location.pathname.startsWith('/projects')) {
+    if (location.pathname.startsWith('/projects') || location.pathname.startsWith('/project/')) {
       return {
         bg: '#5A7E8C',
         hover: '#4A6B75',

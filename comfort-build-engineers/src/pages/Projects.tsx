@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ProjectsHero from '../components/sections/ProjectsHero';
+import ProjectsFilterBar, { type FilterCategory } from '../components/sections/ProjectsFilterBar';
+import ProjectsGrid from '../components/sections/ProjectsGrid';
 
 const Projects: React.FC = () => {
+  const [activeFilter, setActiveFilter] = useState<FilterCategory>('All');
+
+  const handleFilterChange = (filter: FilterCategory) => {
+    setActiveFilter(filter);
+  };
+
   return (
-    <div className="min-h-screen bg-neutral-50">
-      <div className="section-container py-16">
-        <h1 className="text-4xl font-bold text-neutral-800 mb-8">Our Projects</h1>
-        <p className="text-lg text-neutral-600">
-          Explore our portfolio of successful engineering projects.
-        </p>
-      </div>
+    <div className="min-h-screen bg-white">
+      <ProjectsHero />
+      <ProjectsFilterBar
+        onFilterChange={handleFilterChange}
+        initialFilter={activeFilter}
+      />
+      <ProjectsGrid activeFilter={activeFilter} />
     </div>
   );
 };
