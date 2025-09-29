@@ -1,4 +1,5 @@
 import { type FC, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 type FilterCategory =
@@ -12,7 +13,7 @@ type FilterCategory =
 
 interface ProjectsFilterBarProps {
   onFilterChange?: (filter: FilterCategory) => void;
-  initialFilter?: FilterCategory;
+  activeFilter: FilterCategory;
 }
 
 const filterCategories: FilterCategory[] = [
@@ -27,13 +28,34 @@ const filterCategories: FilterCategory[] = [
 
 const ProjectsFilterBar: FC<ProjectsFilterBarProps> = ({
   onFilterChange,
-  initialFilter = 'All'
+  activeFilter
 }) => {
-  const [activeFilter, setActiveFilter] = useState<FilterCategory>(initialFilter);
+  const navigate = useNavigate();
+
+  // Convert FilterCategory to URL slug
+  const getCategorySlug = (category: FilterCategory): string => {
+    const slugMap: Record<FilterCategory, string> = {
+      'All': '',
+      'Commercial': 'commercial',
+      'Design-Build': 'design-build',
+      'Factory Planning': 'factory-planning',
+      'Industrial': 'industrial',
+      'Project Management': 'project-management',
+      'Residential': 'residential'
+    };
+    return slugMap[category];
+  };
 
   const handleFilterClick = (filter: FilterCategory) => {
-    setActiveFilter(filter);
     onFilterChange?.(filter);
+
+    // Navigate to the appropriate URL
+    const slug = getCategorySlug(filter);
+    if (slug) {
+      navigate(`/projects/${slug}`);
+    } else {
+      navigate('/projects');
+    }
   };
 
   const handleKeyDown = (event: React.KeyboardEvent, filter: FilterCategory) => {
