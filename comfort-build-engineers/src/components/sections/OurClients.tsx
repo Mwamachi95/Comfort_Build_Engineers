@@ -50,33 +50,80 @@ const clients: Client[] = [
 ];
 
 const OurClients: FC = () => {
-  // Duplicate the clients array for seamless looping
-  const duplicatedClients = [...clients, ...clients];
+  // Create multiple copies for truly seamless infinite scroll
+  const repeatedClients = Array(4).fill(clients).flat();
 
   return (
     <>
       <style>{`
-        @keyframes marquee {
-          from { transform: translateX(0); }
-          to { transform: translateX(-50%); }
+        .marquee-container {
+          overflow: hidden;
+          position: relative;
         }
-        
-        .marquee {
-          animation: marquee 20s linear infinite;
+
+        .marquee-track {
+          display: flex;
+          gap: 4rem;
+          animation: infinite-scroll 40s linear infinite;
+          width: max-content;
+        }
+
+        @media (min-width: 768px) {
+          .marquee-track {
+            gap: 5rem;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .marquee-track {
+            gap: 6rem;
+          }
+        }
+
+        @keyframes infinite-scroll {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(calc(-25% - 2rem));
+          }
+        }
+
+        .logo-item {
+          flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 120px;
+        }
+
+        @media (min-width: 768px) {
+          .logo-item {
+            min-width: 140px;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .logo-item {
+            min-width: 160px;
+          }
         }
 
         @media (prefers-reduced-motion: reduce) {
-          .marquee {
+          .marquee-track {
             animation: none;
+          }
+          .marquee-container {
+            overflow-x: auto;
           }
         }
       `}</style>
-      
+
       <section className="bg-white py-20 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Title */}
           <div className="text-center mb-16">
-            <span 
+            <span
               className="text-base font-bold tracking-wider uppercase font-heading"
               style={{ color: '#A43D39' }}
             >
@@ -88,17 +135,17 @@ const OurClients: FC = () => {
           </div>
 
           {/* Logo Marquee */}
-          <div className="overflow-hidden">
-            <div className="flex items-center space-x-16 md:space-x-20 lg:space-x-24 marquee">
-              {duplicatedClients.map((client, index) => (
+          <div className="marquee-container">
+            <div className="marquee-track">
+              {repeatedClients.map((client, index) => (
                 <div
                   key={`${client.id}-${index}`}
-                  className="flex-shrink-0 group"
+                  className="logo-item"
                 >
                   <img
                     src={client.logo}
                     alt={client.name}
-                    className="h-12 md:h-16 lg:h-20 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                    className="h-12 md:h-16 lg:h-20 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300 max-w-full"
                   />
                 </div>
               ))}
