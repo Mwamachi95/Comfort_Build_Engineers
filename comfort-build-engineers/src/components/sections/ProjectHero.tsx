@@ -89,7 +89,7 @@ const ProjectHero: FC<ProjectHeroProps> = ({
       </section>
 
       {/* Hero Image - Full Width with Parallax */}
-      <section ref={containerRef} className="w-full h-screen sm:h-screen md:h-screen lg:h-screen overflow-hidden">
+      <section ref={containerRef} className="relative w-full h-screen sm:h-screen md:h-screen lg:h-screen overflow-hidden">
         <div className="relative w-full h-full">
           <motion.img
             src={heroImage}
