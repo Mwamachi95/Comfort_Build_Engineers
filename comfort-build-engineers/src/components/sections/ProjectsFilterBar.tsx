@@ -1,5 +1,5 @@
-import { type FC, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { type FC, useState, useRef, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 type FilterCategory =
@@ -31,6 +31,44 @@ const ProjectsFilterBar: FC<ProjectsFilterBarProps> = ({
   activeFilter
 }) => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const filterBarRef = useRef<HTMLElement>(null);
+  const prevLocationRef = useRef(location.pathname);
+
+  // Scroll to filter bar when navigating between project filters
+  useEffect(() => {
+    const prevPathname = prevLocationRef.current;
+    const currentPathname = location.pathname;
+
+    // Check if we're navigating within Projects pages (filter changes)
+    const isProjectsToProjects =
+      (prevPathname === '/projects' || prevPathname.startsWith('/projects/')) &&
+      (currentPathname === '/projects' || currentPathname.startsWith('/projects/'));
+
+    // Scroll when changing filters
+    if (isProjectsToProjects && prevPathname !== currentPathname) {
+      // If going to "All" projects (/projects), scroll to top
+      if (currentPathname === '/projects') {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
+      // If going to a specific category filter, scroll to filter bar
+      else if (filterBarRef.current) {
+        const navbarHeight = 80; // Approximate navbar height
+        const elementPosition = filterBarRef.current.offsetTop;
+        const offsetPosition = elementPosition - navbarHeight;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    prevLocationRef.current = location.pathname;
+  }, [location.pathname]);
 
   // Convert FilterCategory to URL slug
   const getCategorySlug = (category: FilterCategory): string => {
@@ -66,7 +104,7 @@ const ProjectsFilterBar: FC<ProjectsFilterBarProps> = ({
   };
 
   return (
-    <section className="bg-white py-12 border-b border-neutral-100" role="region" aria-label="Project filter options">
+    <section ref={filterBarRef} className="bg-white py-12 border-b border-neutral-100" role="region" aria-label="Project filter options">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-start">
           <div className="flex flex-wrap justify-start gap-3 md:gap-4 max-w-full">
