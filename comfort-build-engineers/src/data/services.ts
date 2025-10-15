@@ -1,4 +1,10 @@
 import type { Service } from '../types';
+import mechanicalLogo from '../assets/images/service-page/service-logos/mechanical_engineering.svg';
+import plumbingLogo from '../assets/images/service-page/service-logos/plumbing_services.svg';
+import electricalLogo from '../assets/images/service-page/service-logos/electrical_engineering.svg';
+import factoryPlanningLogo from '../assets/images/service-page/service-logos/factory_planning.svg';
+import projectManagementLogo from '../assets/images/service-page/service-logos/project_management.svg';
+import designBuildLogo from '../assets/images/service-page/service-logos/design_&_build.svg';
 
 export const services: Service[] = [
   {
@@ -7,43 +13,44 @@ export const services: Service[] = [
     title: 'Mechanical',
     description: 'Complete HVAC, ventilation, and building automation solutions for optimal climate control and energy efficiency.',
     icon: 'cog',
+    logo: mechanicalLogo,
     slug: 'mechanical',
     color: '#4C8D8F',
     segments: [
       {
         id: '1',
-        title: 'HVAC System Design & Installation',
-        description: 'Complete heating, ventilation, and air conditioning systems for optimal climate control and energy efficiency.',
+        title: 'HVAC',
+        description: 'Complete heating, ventilation, and air conditioning system design ensuring optimal indoor climate control, air quality, and energy efficiency for all building types.',
         position: { row: 0, col: 0 }
       },
       {
         id: '2',
-        title: 'Building Automation Systems (BAS)',
-        description: 'Smart building technologies integrating HVAC, lighting, and security for centralized control.',
+        title: 'Compressed Air Cooling',
+        description: 'Industrial-grade compressed air systems delivering reliable, clean, and efficient pneumatic power for manufacturing processes and equipment operation.',
         position: { row: 0, col: 1 }
       },
       {
         id: '3',
-        title: 'Exhaust & Ventilation',
-        description: 'Industrial and commercial ventilation systems ensuring proper air circulation and contaminant removal.',
+        title: 'Cold Storage',
+        description: 'Specialized refrigeration and temperature-controlled storage solutions maintaining precise environmental conditions for pharmaceutical, food, and industrial applications.',
         position: { row: 0, col: 2 }
       },
       {
         id: '4',
-        title: 'Chilled Water & Heating Systems',
-        description: 'Centralized cooling and heating distribution systems for commercial and industrial applications.',
+        title: 'Steam/Hot Water Boilers',
+        description: 'High-efficiency boiler systems providing consistent steam and hot water generation for industrial processes, heating, and sanitization requirements.',
         position: { row: 1, col: 0 }
       },
       {
         id: '5',
-        title: 'Energy Recovery & Management',
-        description: 'Sustainable solutions for energy conservation, heat recovery, and efficient power management.',
+        title: 'Fire Protection Systems',
+        description: 'Comprehensive fire suppression solutions including sprinkler systems, gaseous suppression, and specialized protection for critical facilities and equipment.',
         position: { row: 1, col: 1 }
       },
       {
         id: '6',
-        title: 'Air Filtration & Cleanroom Solutions',
-        description: 'Specialized air purification systems for cleanrooms, laboratories, and pristine air environments.',
+        title: 'Solar Heating Systems',
+        description: 'Renewable solar thermal technology harnessing Kenya\'s abundant sunshine to provide cost-effective water and space heating with minimal environmental impact.',
         position: { row: 1, col: 2 }
       }
     ]
@@ -54,43 +61,44 @@ export const services: Service[] = [
     title: 'Plumbing',
     description: 'Comprehensive water systems, drainage, and specialized piping solutions for residential and commercial applications.',
     icon: 'wrench',
+    logo: plumbingLogo,
     slug: 'plumbing',
     color: '#4D594F',
     segments: [
       {
         id: '1',
-        title: 'Domestic & Commercial Water Systems',
-        description: 'Efficient water supply systems from residential setups to complex commercial installations.',
+        title: 'Potable Hot & Cold Water Supply',
+        description: 'Reliable domestic water distribution systems delivering clean, temperature-controlled water throughout buildings with proper pressure, quality, and conservation measures.',
         position: { row: 0, col: 0 }
       },
       {
         id: '2',
-        title: 'Sanitary & Drainage',
-        description: 'Comprehensive sanitary and stormwater drainage solutions ensuring proper waste disposal.',
+        title: 'Waste Removal Systems',
+        description: 'Sanitary drainage and sewage systems efficiently removing wastewater and solid waste while preventing contamination, odors, and ensuring hygienic facility conditions.',
         position: { row: 0, col: 1 }
       },
       {
         id: '3',
-        title: 'Fire Suppression Systems',
-        description: 'Expert fire sprinkler, hydrant, and hose reel systems meeting safety regulations.',
+        title: 'Water Recovery & Treatment Systems',
+        description: 'Sustainable water management solutions including greywater recycling, wastewater treatment, and purification systems reducing consumption and operational costs.',
         position: { row: 0, col: 2 }
       },
       {
         id: '4',
-        title: 'Specialized Piping',
-        description: 'Industrial process piping, compressed air lines, and medical gas systems.',
+        title: 'Rainwater, Surface & Subsurface Drainage',
+        description: 'Comprehensive stormwater management including collection, conveyance, and disposal systems protecting structures from water damage and managing site runoff effectively.',
         position: { row: 1, col: 0 }
       },
       {
         id: '5',
-        title: 'Water Conservation & Treatment',
-        description: 'Sustainable solutions including greywater recycling and rainwater harvesting.',
+        title: 'Backflow Prevention & Cross-Connection Control',
+        description: 'Critical safety devices and testing programs preventing contamination of potable water supplies by ensuring one-way flow and protecting public health.',
         position: { row: 1, col: 1 }
       },
       {
         id: '6',
-        title: 'Maintenance & Repairs',
-        description: 'Scheduled maintenance and emergency repairs to ensure optimal system performance.',
+        title: 'Pumping Systems',
+        description: 'Specialized water and wastewater pumping solutions including booster pumps, sump pumps, and sewage ejectors ensuring proper flow and pressure throughout facilities.',
         position: { row: 1, col: 2 }
       }
     ]
@@ -101,43 +109,44 @@ export const services: Service[] = [
     title: 'Electrical',
     description: 'Complete electrical installations, power distribution, and smart building technologies for modern infrastructure.',
     icon: 'bolt',
+    logo: electricalLogo,
     slug: 'electrical',
     color: '#708C8C',
     segments: [
       {
         id: '1',
-        title: 'Power Distribution & Switchgear',
-        description: 'Main electrical panels, switchboards, and power distribution systems for safe electricity supply.',
+        title: 'Electric Power Supply & Distribution',
+        description: 'Complete electrical infrastructure from utility connection through switchgear, transformers, and distribution panels ensuring safe, reliable power throughout your facility.',
         position: { row: 0, col: 0 }
       },
       {
         id: '2',
-        title: 'Lighting Systems & Controls',
-        description: 'Energy-efficient LED lighting with intelligent controls and automation systems.',
+        title: 'Lighting',
+        description: 'Energy-efficient lighting design combining natural and artificial illumination to optimize visibility, reduce energy costs, and enhance occupant comfort and productivity.',
         position: { row: 0, col: 1 }
       },
       {
         id: '3',
-        title: 'Emergency & Backup Power',
-        description: 'Generator systems, UPS installations, and emergency lighting for continuous operations.',
+        title: 'Structured Cabling',
+        description: 'Integrated data and communications infrastructure supporting voice, data, and video networks with scalable, high-performance cabling systems for modern connectivity needs.',
         position: { row: 0, col: 2 }
       },
       {
         id: '4',
-        title: 'Industrial Motor & Drive Systems',
-        description: 'Motor control centers, variable frequency drives, and industrial automation controls.',
+        title: 'Queue Management',
+        description: 'Electronic queuing and customer flow management systems utilizing digital displays, ticketing, and analytics to optimize service delivery and reduce wait times.',
         position: { row: 1, col: 0 }
       },
       {
         id: '5',
-        title: 'Security & Communication Systems',
-        description: 'CCTV, access control, fire alarms, and structured cabling installations.',
+        title: 'Access Control',
+        description: 'Comprehensive security solutions including card readers, biometric systems, and integrated software controlling facility access and monitoring personnel movement.',
         position: { row: 1, col: 1 }
       },
       {
         id: '6',
-        title: 'Energy Management & Solar',
-        description: 'Smart metering, energy monitoring, and renewable energy integration systems.',
+        title: 'Fire Detection Systems',
+        description: 'Advanced fire alarm and detection networks with smoke sensors, heat detectors, and emergency notification systems ensuring rapid response and life safety compliance.',
         position: { row: 1, col: 2 }
       }
     ]
@@ -148,6 +157,7 @@ export const services: Service[] = [
     title: 'Factory Planning',
     description: 'Complete industrial facility design, process optimization, and manufacturing infrastructure planning.',
     icon: 'building-office',
+    logo: factoryPlanningLogo,
     slug: 'factory-planning',
     color: '#2E402F',
     segments: [
@@ -195,6 +205,7 @@ export const services: Service[] = [
     title: 'Project Management',
     description: 'End-to-end project delivery, coordination, and quality assurance for engineering projects of all scales.',
     icon: 'clipboard-document-check',
+    logo: projectManagementLogo,
     slug: 'project-management',
     color: '#798C79',
     segments: [
@@ -242,6 +253,7 @@ export const services: Service[] = [
     title: 'Design & Build',
     description: 'Comprehensive design-build services providing seamless integration from concept to completion under one roof.',
     icon: 'pencil-square',
+    logo: designBuildLogo,
     slug: 'design-build',
     color: '#345E6D',
     segments: [

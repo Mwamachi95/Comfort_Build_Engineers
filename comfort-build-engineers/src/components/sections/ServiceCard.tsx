@@ -1,5 +1,4 @@
 import React from 'react';
-import { ChartBarIcon } from '@heroicons/react/24/outline';
 import type { Service } from '../../types';
 
 interface ServiceCardProps {
@@ -15,12 +14,16 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
         borderRadius: '6px'
       }}
     >
-      {/* Icon Area */}
-      <div 
+      {/* Logo Area */}
+      <div
         className="w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center mb-6 lg:mb-8"
-        style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }}
+        style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)' }}
       >
-        <ChartBarIcon className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
+        <img
+          src={service.logo}
+          alt={`${service.name} logo`}
+          className="w-7 h-7 lg:w-8 lg:h-8"
+        />
       </div>
       
       {/* Content pushed to bottom */}

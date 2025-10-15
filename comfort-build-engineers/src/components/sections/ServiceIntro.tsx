@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 interface ServiceIntroProps {
   serviceName: string;
+  serviceSlug: string;
   heroImage: string;
   heroImageAlt: string;
   serviceColor: string;
@@ -19,6 +20,7 @@ interface ServiceIntroProps {
 
 const ServiceIntro: React.FC<ServiceIntroProps> = ({
   serviceName,
+  serviceSlug,
   heroImage,
   heroImageAlt,
   serviceColor,
@@ -26,6 +28,9 @@ const ServiceIntro: React.FC<ServiceIntroProps> = ({
   overview,
   approach,
 }) => {
+  // Use white text and border for Factory Planning and Plumbing, service color for others
+  const titleColor = (serviceSlug === 'factory-planning' || serviceSlug === 'plumbing') ? '#FFFFFF' : serviceColor;
+  const borderColor = (serviceSlug === 'factory-planning' || serviceSlug === 'plumbing') ? '#FFFFFF' : serviceColor;
   return (
     <section className="w-full flex flex-col">
       {/* Full-Width Hero Image - 50vh on desktop */}
@@ -47,7 +52,7 @@ const ServiceIntro: React.FC<ServiceIntroProps> = ({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2
               className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading drop-shadow-lg border-l-8 pl-4 md:pl-6"
-              style={{ color: serviceColor, borderColor: serviceColor }}
+              style={{ color: titleColor, borderColor: borderColor }}
             >
               {serviceName}
             </h2>
