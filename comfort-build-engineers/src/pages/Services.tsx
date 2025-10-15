@@ -2,7 +2,9 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { services } from '../data/services';
+import { getServiceIntroBySlug } from '../data/serviceIntros';
 import ServiceSection from '../components/sections/ServiceSection';
+import ServiceIntro from '../components/sections/ServiceIntro';
 import PipelineMaintenanceSvg from '../assets/images/Service-page/Hero/Pipeline-maintenance-rafiki.svg';
 
 const Services: React.FC = () => {
@@ -128,21 +130,39 @@ const Services: React.FC = () => {
       </section>
 
       {/* All Services Sections */}
-      <div className="py-16 md:py-24 space-y-20 md:space-y-32">
-        <div className="section-container">
-          {services.map((service, index) => (
-            <div 
-              key={service.id} 
+      <div className="space-y-20 md:space-y-32">
+        {services.map((service, index) => {
+          const serviceIntro = getServiceIntroBySlug(service.slug);
+
+          return (
+            <div
+              key={service.id}
               id={service.slug}
               className={index > 0 ? 'mt-20 md:mt-32' : ''}
             >
-              <ServiceSection 
-                service={service} 
-                index={index}
-              />
+              {/* Service Introduction (if available) */}
+              {serviceIntro && (
+                <ServiceIntro
+                  serviceName={service.name}
+                  heroImage={serviceIntro.heroImage}
+                  heroImageAlt={serviceIntro.heroImageAlt}
+                  serviceColor={service.color}
+                  tagline={serviceIntro.tagline}
+                  overview={serviceIntro.overview}
+                  approach={serviceIntro.approach}
+                />
+              )}
+
+              {/* Service Segments Grid */}
+              <div className="section-container mt-6 md:mt-8 lg:mt-10">
+                <ServiceSection
+                  service={service}
+                  index={index}
+                />
+              </div>
             </div>
-          ))}
-        </div>
+          );
+        })}
       </div>
 
     </div>

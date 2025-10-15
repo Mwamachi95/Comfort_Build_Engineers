@@ -84,3 +84,18 @@ export interface ContactFormData {
   companyName: string;
   message: string;
 }
+
+export interface ServiceIntroData {
+  serviceSlug: string;
+  heroImage: string;
+  heroImageAlt: string;
+  tagline: string;
+  overview: {
+    title: string;
+    content: string;
+  };
+  approach: {
+    title: string;
+    content: string;
+  };
+}
