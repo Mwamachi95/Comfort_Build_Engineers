@@ -1,10 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import OptimizedImage from '../common/OptimizedImage';
+
+interface Picture {
+  img: { src: string; w: number; h: number };
+  sources: { [key: string]: Array<{ src: string; w: number; h: number }> };
+}
 
 interface ServiceIntroProps {
   serviceName: string;
   serviceSlug: string;
-  heroImage: string;
+  heroImage: Picture;
   heroImageAlt: string;
   serviceColor: string;
   tagline: string;
@@ -41,11 +47,12 @@ const ServiceIntro: React.FC<ServiceIntroProps> = ({
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <img
-          src={heroImage}
+        <OptimizedImage
+          picture={heroImage}
           alt={heroImageAlt}
           className="w-full h-full object-cover"
           loading="eager"
+          sizes="100vw"
         />
         {/* Service Name Overlay */}
         <div className="absolute bottom-0 left-0 w-full pb-6 md:pb-8 lg:pb-10">

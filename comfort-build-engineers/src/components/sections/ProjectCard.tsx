@@ -3,12 +3,18 @@ import { Link } from 'react-router-dom';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
 import type { FilterCategory } from './ProjectsFilterBar';
+import OptimizedImage from '../common/OptimizedImage';
+
+interface Picture {
+  img: { src: string; w: number; h: number };
+  sources: { [key: string]: Array<{ src: string; w: number; h: number }> };
+}
 
 interface Project {
   id: string;
   title: string;
   description: string;
-  image: string;
+  image: Picture;
   categories: FilterCategory[];
   link: string;
 }
@@ -29,10 +35,12 @@ const ProjectCard: FC<ProjectCardProps> = ({ project, index }) => {
       <div className="flex flex-col md:flex-row gap-6 md:gap-8">
         {/* Left side - Image */}
         <div className="md:w-1/2 relative overflow-hidden rounded-lg">
-          <img
-            src={project.image}
+          <OptimizedImage
+            picture={project.image}
             alt={project.title}
             className="w-full h-64 md:h-80 lg:h-96 object-cover group-hover:scale-105 transition-transform duration-300"
+            loading="lazy"
+            sizes="(min-width: 768px) 50vw, 100vw"
           />
         </div>
 

@@ -2,20 +2,36 @@ import { useState, useEffect, useRef, type FC } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import { motion, AnimatePresence } from 'framer-motion';
+import OptimizedImage from '../common/OptimizedImage';
 
-// Import service images
-import mechanicalImg from '../../assets/images/Home/services/mechanical.jpg';
-import plumbingImg from '../../assets/images/Home/services/plumbing.jpg';
-import electricalImg from '../../assets/images/Home/services/electrical.jpg';
-import factoryPlanningImg from '../../assets/images/Home/services/factory-planning.jpg';
-import projectManagementImg from '../../assets/images/Home/services/project-management.jpg';
-import designBuildImg from '../../assets/images/Home/services/design-build.jpg';
+// Import optimized service images
+// @ts-ignore - vite-imagetools provides this type
+import mechanicalImg from '../../assets/images/Home/services/mechanical.jpg?service';
+// @ts-ignore
+import plumbingImg from '../../assets/images/Home/services/plumbing.jpg?service';
+// @ts-ignore
+import electricalImg from '../../assets/images/Home/services/electrical.jpg?service';
+// @ts-ignore
+import factoryPlanningImg from '../../assets/images/Home/services/factory-planning.jpg?service';
+// @ts-ignore
+import projectManagementImg from '../../assets/images/Home/services/project-management.jpg?service';
+// @ts-ignore
+import designBuildImg from '../../assets/images/Home/services/design-build.jpg?service';
+// @ts-ignore
+import procurementSupportImg from '../../assets/images/Home/services/procurement-support-services.jpg?service';
+// @ts-ignore
+import riskManagementImg from '../../assets/images/Home/services/risk-management.jpg?service';
+
+interface Picture {
+  img: { src: string; w: number; h: number };
+  sources: { [key: string]: Array<{ src: string; w: number; h: number }> };
+}
 
 interface Service {
   number: string;
   title: string;
   description: string;
-  image: string;
+  image: Picture;
   link: string;
 }
 
@@ -61,6 +77,20 @@ const services: Service[] = [
     description: 'Integrated design-build solutions from conceptual planning to final construction, delivering turnkey MEP engineering projects with seamless execution.',
     image: designBuildImg,
     link: '/services#design-build'
+  },
+  {
+    number: '07',
+    title: 'Procurement Support',
+    description: 'Expert procurement guidance and technical evaluation ensuring you acquire the right industrial equipment at optimal value, delivered on time and ready for seamless integration.',
+    image: procurementSupportImg,
+    link: '/services#procurement-support'
+  },
+  {
+    number: '08',
+    title: 'Risk Management',
+    description: 'Proactive risk identification and mitigation strategies protecting your MEP projects and facilities from technical, financial, and operational uncertainties throughout the project lifecycle.',
+    image: riskManagementImg,
+    link: '/services#risk-management'
   }
 ];
 
@@ -184,10 +214,12 @@ const ServicesCarousel: FC = () => {
                 transition={{ duration: 0.4, ease: 'easeInOut' }}
                 className="relative overflow-hidden rounded-lg shadow-lg"
               >
-                <img
-                  src={currentService.image}
+                <OptimizedImage
+                  picture={currentService.image}
                   alt={currentService.title}
                   className="w-full h-96 md:h-[32rem] lg:h-[36rem] object-cover"
+                  loading="eager"
+                  sizes="(min-width: 1024px) 60vw, 100vw"
                 />
               </motion.div>
             </AnimatePresence>

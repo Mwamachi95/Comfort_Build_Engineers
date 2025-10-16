@@ -1,12 +1,20 @@
 import type { ServiceIntroData } from '../types';
-import mechanicalImage from '../assets/images/home/services/mechanical.jpg';
-import plumbingImage from '../assets/images/home/services/plumbing.jpg';
-import electricalImage from '../assets/images/home/services/electrical.jpg';
-import factoryPlanningImage from '../assets/images/home/services/factory-planning.jpg';
-import projectManagementImage from '../assets/images/home/services/project-management.jpg';
-import designBuildImage from '../assets/images/home/services/design-build.jpg';
-import procurementSupportImage from '../assets/images/home/services/procurement-support-services.jpg';
-import riskManagementImage from '../assets/images/home/services/risk-management.jpg';
+// @ts-ignore - vite-imagetools provides this type
+import mechanicalImage from '../assets/images/home/services/mechanical.jpg?service';
+// @ts-ignore
+import plumbingImage from '../assets/images/home/services/plumbing.jpg?service';
+// @ts-ignore
+import electricalImage from '../assets/images/home/services/electrical.jpg?service';
+// @ts-ignore
+import factoryPlanningImage from '../assets/images/home/services/factory-planning.jpg?service';
+// @ts-ignore
+import projectManagementImage from '../assets/images/home/services/project-management.jpg?service';
+// @ts-ignore
+import designBuildImage from '../assets/images/home/services/design-build.jpg?service';
+// @ts-ignore
+import procurementSupportImage from '../assets/images/home/services/procurement-support-services.jpg?service';
+// @ts-ignore
+import riskManagementImage from '../assets/images/home/services/risk-management.jpg?service';
 
 export const serviceIntros: ServiceIntroData[] = [
   {

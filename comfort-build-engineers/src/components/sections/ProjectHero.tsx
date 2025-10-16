@@ -1,10 +1,16 @@
 import { type FC, useRef, useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import OptimizedImage from '../common/OptimizedImage';
+
+interface Picture {
+  img: { src: string; w: number; h: number };
+  sources: { [key: string]: Array<{ src: string; w: number; h: number }> };
+}
 
 interface ProjectHeroProps {
   title: string;
   tagline: string;
-  heroImage: string;
+  heroImage: Picture;
 }
 
 const ProjectHero: FC<ProjectHeroProps> = ({
@@ -90,19 +96,17 @@ const ProjectHero: FC<ProjectHeroProps> = ({
 
       {/* Hero Image - Full Width with Parallax */}
       <section ref={containerRef} className="relative w-full h-screen sm:h-screen md:h-screen lg:h-screen overflow-hidden">
-        <div className="relative w-full h-full">
-          <motion.img
-            src={heroImage}
+        <motion.div className="relative w-full h-full" style={{ y }}>
+          <OptimizedImage
+            picture={heroImage}
             alt={`${title} project hero`}
             className="w-full h-full object-cover"
             loading="eager"
-            style={{
-              y,
-            }}
+            sizes="100vw"
           />
           {/* Overlay for better text contrast if needed */}
           <div className="absolute inset-0 bg-black bg-opacity-10"></div>
-        </div>
+        </motion.div>
       </section>
     </>
   );

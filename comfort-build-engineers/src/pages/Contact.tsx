@@ -46,15 +46,10 @@ const Contact: React.FC = () => {
 
   const onSubmit = async (data: ContactFormSchema) => {
     try {
-      console.log('Submitting form data:', data);
-      console.log('Formspree state before submit:', formspreeState);
-
       // Submit to Formspree
       await handleFormspreeSubmit(data);
-
-      console.log('Formspree state after submit:', formspreeState);
     } catch (error) {
-      console.error('Form submission error:', error);
+      // Silent error handling - user will see error message in UI
     }
   };
 

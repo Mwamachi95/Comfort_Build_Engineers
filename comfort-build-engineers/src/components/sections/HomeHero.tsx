@@ -2,16 +2,24 @@ import { type FC } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
-import HomeHeroBg from '../../assets/images/Home/hero/home-hero.jpg';
+import OptimizedImage from '../common/OptimizedImage';
+// @ts-ignore - vite-imagetools provides this type
+import HomeHeroBg from '../../assets/images/Home/hero/home-hero.jpg?hero';
 
 const HomeHero: FC = () => {
   return (
-    <section 
-      className="relative h-screen flex items-end bg-cover bg-center bg-no-repeat"
-      style={{ 
-        backgroundImage: `url(${HomeHeroBg})` 
-      }}
-    >
+    <section className="relative h-screen flex items-end overflow-hidden">
+      {/* Optimized Background Image */}
+      <div className="absolute inset-0">
+        <OptimizedImage
+          picture={HomeHeroBg}
+          alt="Industrial engineering facility"
+          className="w-full h-full object-cover"
+          loading="eager"
+          sizes="100vw"
+        />
+      </div>
+
       {/* Dark Overlay for Text Contrast */}
       <div className="absolute inset-0 bg-black bg-opacity-30"></div>
       

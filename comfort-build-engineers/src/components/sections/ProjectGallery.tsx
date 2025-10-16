@@ -1,9 +1,15 @@
 import { type FC, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { XMarkIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
+import OptimizedImage from '../common/OptimizedImage';
+
+interface Picture {
+  img: { src: string; w: number; h: number };
+  sources: { [key: string]: Array<{ src: string; w: number; h: number }> };
+}
 
 interface ProjectGalleryProps {
-  images: string[];
+  images: Picture[];
   projectTitle: string;
   projectColor?: string;
 }
@@ -76,11 +82,12 @@ const ProjectGallery: FC<ProjectGalleryProps> = ({
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 onClick={() => openLightbox(index)}
               >
-                <img
-                  src={image}
+                <OptimizedImage
+                  picture={image}
                   alt={`${projectTitle} - Image ${index + 1}`}
                   className="w-full h-64 md:h-72 object-cover group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                 />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300"></div>
@@ -152,17 +159,23 @@ const ProjectGallery: FC<ProjectGalleryProps> = ({
             )}
 
             {/* Image */}
-            <motion.img
+            <motion.div
               key={selectedImage}
-              src={images[selectedImage]}
-              alt={`${projectTitle} - Image ${selectedImage + 1}`}
-              className="max-w-full max-h-full object-contain"
+              className="max-w-full max-h-full"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ duration: 0.3 }}
               onClick={(e) => e.stopPropagation()}
-            />
+            >
+              <OptimizedImage
+                picture={images[selectedImage]}
+                alt={`${projectTitle} - Image ${selectedImage + 1}`}
+                className="max-w-full max-h-full object-contain"
+                loading="eager"
+                sizes="100vw"
+              />
+            </motion.div>
 
             {/* Image Counter */}
             {images.length > 1 && (

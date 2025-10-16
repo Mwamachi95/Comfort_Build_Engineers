@@ -1,10 +1,16 @@
 import { type FC } from 'react';
 import { motion } from 'framer-motion';
+import OptimizedImage from '../common/OptimizedImage';
+
+interface Picture {
+  img: { src: string; w: number; h: number };
+  sources: { [key: string]: Array<{ src: string; w: number; h: number }> };
+}
 
 interface ProjectDescriptionProps {
   introduction: string;
   description: string;
-  image: string;
+  image: Picture;
   imageAlt: string;
   projectColor?: string;
 }
@@ -77,11 +83,12 @@ const ProjectDescription: FC<ProjectDescriptionProps> = ({
             className="relative"
           >
             <div className="relative overflow-hidden rounded-lg shadow-lg">
-              <img
-                src={image}
+              <OptimizedImage
+                picture={image}
                 alt={imageAlt}
                 className="w-full h-96 md:h-[28rem] lg:h-[32rem] object-cover"
                 loading="lazy"
+                sizes="(min-width: 1024px) 50vw, 100vw"
               />
             </div>
           </motion.div>

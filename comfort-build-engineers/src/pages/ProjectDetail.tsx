@@ -5,91 +5,146 @@ import ProjectDescription from '../components/sections/ProjectDescription';
 import ServicesOverview from '../components/sections/ServicesOverview';
 import ProjectGallery from '../components/sections/ProjectGallery';
 
-// Import project images - this would be dynamically generated in a real app
-import bravaHero from '../assets/images/Projects/per-project/brava-foods/hero.jpg';
-import bravaImg3 from '../assets/images/Projects/per-project/brava-foods/3.jpg';
-import bravaImg4 from '../assets/images/Projects/per-project/brava-foods/4.jpg';
-import bravaImg5 from '../assets/images/Projects/per-project/brava-foods/5.jpg';
-import bravaImg6 from '../assets/images/Projects/per-project/brava-foods/6.jpg';
-import bravaImg8 from '../assets/images/Projects/per-project/brava-foods/8.jpg';
+// Import project images with optimization
+// @ts-ignore - vite-imagetools provides this type
+import bravaHero from '../assets/images/Projects/per-project/brava-foods/hero.jpg?project';
+// @ts-ignore
+import bravaImg3 from '../assets/images/Projects/per-project/brava-foods/3.jpg?project';
+// @ts-ignore
+import bravaImg4 from '../assets/images/Projects/per-project/brava-foods/4.jpg?project';
+// @ts-ignore
+import bravaImg5 from '../assets/images/Projects/per-project/brava-foods/5.jpg?project';
+// @ts-ignore
+import bravaImg6 from '../assets/images/Projects/per-project/brava-foods/6.jpg?project';
+// @ts-ignore
+import bravaImg8 from '../assets/images/Projects/per-project/brava-foods/8.jpg?project';
 
-import ecobankHero from '../assets/images/Projects/per-project/ecobank/ecobank-hero.jpg';
-import ecobankImg2 from '../assets/images/Projects/per-project/ecobank/2.jpg';
-import ecobankImg3 from '../assets/images/Projects/per-project/ecobank/3.jpg';
-import ecobankImg4 from '../assets/images/Projects/per-project/ecobank/4.jpg';
+// @ts-ignore
+import ecobankHero from '../assets/images/Projects/per-project/ecobank/ecobank-hero.jpg?project';
+// @ts-ignore
+import ecobankImg2 from '../assets/images/Projects/per-project/ecobank/2.jpg?project';
+// @ts-ignore
+import ecobankImg3 from '../assets/images/Projects/per-project/ecobank/3.jpg?project';
+// @ts-ignore
+import ecobankImg4 from '../assets/images/Projects/per-project/ecobank/4.jpg?project';
 
 // Lynx Apartments images
-import lynxHero from '../assets/images/Projects/per-project/lynx-apartments/hero.jpg';
-import lynxImg2 from '../assets/images/Projects/per-project/lynx-apartments/2.jpg';
-import lynxImg3 from '../assets/images/Projects/per-project/lynx-apartments/3.jpg';
-import lynxImg4 from '../assets/images/Projects/per-project/lynx-apartments/4.jpg';
+// @ts-ignore
+import lynxHero from '../assets/images/Projects/per-project/lynx-apartments/hero.jpg?project';
+// @ts-ignore
+import lynxImg2 from '../assets/images/Projects/per-project/lynx-apartments/2.jpg?project';
+// @ts-ignore
+import lynxImg3 from '../assets/images/Projects/per-project/lynx-apartments/3.jpg?project';
+// @ts-ignore
+import lynxImg4 from '../assets/images/Projects/per-project/lynx-apartments/4.jpg?project';
 
 // Nairobi Club images
-import nairobiClubHero from '../assets/images/Projects/per-project/nairobi-club/hero.jpg';
-import nairobiClubImg2 from '../assets/images/Projects/per-project/nairobi-club/nairobi-club.jpg';
-import nairobiClubImg3 from '../assets/images/Projects/per-project/nairobi-club/3.jpg';
-import nairobiClubImg4 from '../assets/images/Projects/per-project/nairobi-club/4.jpg';
+// @ts-ignore
+import nairobiClubHero from '../assets/images/Projects/per-project/nairobi-club/hero.jpg?project';
+// @ts-ignore
+import nairobiClubImg2 from '../assets/images/Projects/per-project/nairobi-club/nairobi-club.jpg?project';
+// @ts-ignore
+import nairobiClubImg3 from '../assets/images/Projects/per-project/nairobi-club/3.jpg?project';
+// @ts-ignore
+import nairobiClubImg4 from '../assets/images/Projects/per-project/nairobi-club/4.jpg?project';
 
 // Ravine Dairies images
-import ravineDairiesHero from '../assets/images/Projects/per-project/ravine-dairies/hero.jpg';
-import ravineDairiesImg2 from '../assets/images/Projects/per-project/ravine-dairies/2.jpg';
-import ravineDairiesImg3 from '../assets/images/Projects/per-project/ravine-dairies/3.jpg';
-import ravineDairiesImg4 from '../assets/images/Projects/per-project/ravine-dairies/4.jpg';
-import ravineDairiesImg5 from '../assets/images/Projects/per-project/ravine-dairies/5.jpg';
-import ravineDairiesImgMain from '../assets/images/Projects/per-project/ravine-dairies/ravine-dairies.jpg';
+// @ts-ignore
+import ravineDairiesHero from '../assets/images/Projects/per-project/ravine-dairies/hero.jpg?project';
+// @ts-ignore
+import ravineDairiesImg2 from '../assets/images/Projects/per-project/ravine-dairies/2.jpg?project';
+// @ts-ignore
+import ravineDairiesImg3 from '../assets/images/Projects/per-project/ravine-dairies/3.jpg?project';
+// @ts-ignore
+import ravineDairiesImg4 from '../assets/images/Projects/per-project/ravine-dairies/4.jpg?project';
+// @ts-ignore
+import ravineDairiesImg5 from '../assets/images/Projects/per-project/ravine-dairies/5.jpg?project';
+// @ts-ignore
+import ravineDairiesImgMain from '../assets/images/Projects/per-project/ravine-dairies/ravine-dairies.jpg?project';
 
 // Rosita Apartments images
-import rositaHero from '../assets/images/Projects/per-project/rosita/1.jpg';
-import rositaImg2 from '../assets/images/Projects/per-project/rosita/2.jpg';
-import rositaImg3 from '../assets/images/Projects/per-project/rosita/3.jpg';
-import rositaImg4 from '../assets/images/Projects/per-project/rosita/4.jpg';
+// @ts-ignore
+import rositaHero from '../assets/images/Projects/per-project/rosita/1.jpg?project';
+// @ts-ignore
+import rositaImg2 from '../assets/images/Projects/per-project/rosita/2.jpg?project';
+// @ts-ignore
+import rositaImg3 from '../assets/images/Projects/per-project/rosita/3.jpg?project';
+// @ts-ignore
+import rositaImg4 from '../assets/images/Projects/per-project/rosita/4.jpg?project';
 
 // Sanergy images
-import sanergyHero from '../assets/images/Projects/per-project/sanergy/hero.jpg';
-import sanergyImg2 from '../assets/images/Projects/per-project/sanergy/drone-location.jpg';
-import sanergyImg3 from '../assets/images/Projects/per-project/sanergy/boiler-installation.jpg';
-import sanergyImg4 from '../assets/images/Projects/per-project/sanergy/dryer.jpg';
-import sanergyImg5 from '../assets/images/Projects/per-project/sanergy/drone-solar-2.jpg';
-import sanergyImg6 from '../assets/images/Projects/per-project/sanergy/drone-site-overview-4.jpg';
+// @ts-ignore
+import sanergyHero from '../assets/images/Projects/per-project/sanergy/hero.jpg?project';
+// @ts-ignore
+import sanergyImg2 from '../assets/images/Projects/per-project/sanergy/drone-location.jpg?project';
+// @ts-ignore
+import sanergyImg3 from '../assets/images/Projects/per-project/sanergy/boiler-installation.jpg?project';
+// @ts-ignore
+import sanergyImg4 from '../assets/images/Projects/per-project/sanergy/dryer.jpg?project';
+// @ts-ignore
+import sanergyImg5 from '../assets/images/Projects/per-project/sanergy/drone-solar-2.jpg?project';
+// @ts-ignore
+import sanergyImg6 from '../assets/images/Projects/per-project/sanergy/drone-site-overview-4.jpg?project';
 
 // Sanofi images
-import sanofiHero from '../assets/images/Projects/per-project/sanofi/hero.jpg';
-import sanofiImg2 from '../assets/images/Projects/per-project/sanofi/2.jpg';
-import sanofiImg3 from '../assets/images/Projects/per-project/sanofi/3.jpg';
-import sanofiImg4 from '../assets/images/Projects/per-project/sanofi/4.jpg';
+// @ts-ignore
+import sanofiHero from '../assets/images/Projects/per-project/sanofi/hero.jpg?project';
+// @ts-ignore
+import sanofiImg2 from '../assets/images/Projects/per-project/sanofi/2.jpg?project';
+// @ts-ignore
+import sanofiImg3 from '../assets/images/Projects/per-project/sanofi/3.jpg?project';
+// @ts-ignore
+import sanofiImg4 from '../assets/images/Projects/per-project/sanofi/4.jpg?project';
 
 // SC Johnson images
-import scJohnsonHero from '../assets/images/Projects/per-project/sc-johnson/SC-Johnson.jpg';
+// @ts-ignore
+import scJohnsonHero from '../assets/images/Projects/per-project/sc-johnson/SC-Johnson.jpg?project';
 
 // Vega images
-import vegaHero from '../assets/images/Projects/per-project/vega/hero.jpg';
-import vegaImg2 from '../assets/images/Projects/per-project/vega/2.jpg';
-import vegaImg3 from '../assets/images/Projects/per-project/vega/3.jpg';
-import vegaImg4 from '../assets/images/Projects/per-project/vega/4.jpg';
+// @ts-ignore
+import vegaHero from '../assets/images/Projects/per-project/vega/hero.jpg?project';
+// @ts-ignore
+import vegaImg2 from '../assets/images/Projects/per-project/vega/2.jpg?project';
+// @ts-ignore
+import vegaImg3 from '../assets/images/Projects/per-project/vega/3.jpg?project';
+// @ts-ignore
+import vegaImg4 from '../assets/images/Projects/per-project/vega/4.jpg?project';
 
 // Vert images
-import vertHero from '../assets/images/Projects/per-project/vert/hero.jpg';
-import vertImg2 from '../assets/images/Projects/per-project/vert/2.jpg';
-import vertImg3 from '../assets/images/Projects/per-project/vert/3.jpg';
-import vertImg4 from '../assets/images/Projects/per-project/vert/4.jpg';
-import vertImg6 from '../assets/images/Projects/per-project/vert/6.jpg';
-import vertImg7 from '../assets/images/Projects/per-project/vert/7.jpg';
-import vertImg8 from '../assets/images/Projects/per-project/vert/8.jpg';
+// @ts-ignore
+import vertHero from '../assets/images/Projects/per-project/vert/hero.jpg?project';
+// @ts-ignore
+import vertImg2 from '../assets/images/Projects/per-project/vert/2.jpg?project';
+// @ts-ignore
+import vertImg3 from '../assets/images/Projects/per-project/vert/3.jpg?project';
+// @ts-ignore
+import vertImg4 from '../assets/images/Projects/per-project/vert/4.jpg?project';
+// @ts-ignore
+import vertImg6 from '../assets/images/Projects/per-project/vert/6.jpg?project';
+// @ts-ignore
+import vertImg7 from '../assets/images/Projects/per-project/vert/7.jpg?project';
+// @ts-ignore
+import vertImg8 from '../assets/images/Projects/per-project/vert/8.jpg?project';
+
+interface Picture {
+  img: { src: string; w: number; h: number };
+  sources: { [key: string]: Array<{ src: string; w: number; h: number }> };
+}
 
 interface ProjectData {
   id: string;
   title: string;
   tagline: string;
-  heroImage: string;
+  heroImage: Picture;
   introduction: string;
   description: string;
-  descriptionImage: string;
+  descriptionImage: Picture;
   services: Array<{
     title: string;
     description: string;
   }>;
   scope: string[];
-  additionalImages: string[];
+  additionalImages: Picture[];
 }
 
 const projectsData: Record<string, ProjectData> = {

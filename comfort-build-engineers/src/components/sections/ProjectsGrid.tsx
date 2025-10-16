@@ -2,18 +2,29 @@ import { type FC } from 'react';
 import ProjectCard, { type Project } from './ProjectCard';
 import type { FilterCategory } from './ProjectsFilterBar';
 
-// Import project images
-import bravaFoodsImg from '../../assets/images/Projects/placeholder-images/brava-foods.jpg';
-import ecobankImg from '../../assets/images/Projects/placeholder-images/ecobank-placeholder.jpg';
-import lynxApartmentsImg from '../../assets/images/Projects/placeholder-images/lynx-apartments.jpg';
-import nairobiClubImg from '../../assets/images/Projects/placeholder-images/nairobi-club-placeholder.jpg';
-import ravineDairiesImg from '../../assets/images/Projects/placeholder-images/ravine-dairies.jpg';
-import rositaImg from '../../assets/images/Projects/placeholder-images/rosita-placeholder.jpeg';
-import sanergyImg from '../../assets/images/Projects/placeholder-images/sanergy.jpg';
-import sanofiImg from '../../assets/images/Projects/placeholder-images/sanofi-placeholder.jpg';
-import scJohnsonImg from '../../assets/images/Projects/placeholder-images/sc-johnson.jpg';
-import vegaImg from '../../assets/images/Projects/placeholder-images/vega-placeholder.jpg';
-import vertImg from '../../assets/images/Projects/placeholder-images/vert-placeholder.jpg';
+// Import project images with optimization
+// @ts-ignore - vite-imagetools provides this type
+import bravaFoodsImg from '../../assets/images/Projects/placeholder-images/brava-foods.jpg?project';
+// @ts-ignore
+import ecobankImg from '../../assets/images/Projects/placeholder-images/ecobank-placeholder.jpg?project';
+// @ts-ignore
+import lynxApartmentsImg from '../../assets/images/Projects/placeholder-images/lynx-apartments.jpg?project';
+// @ts-ignore
+import nairobiClubImg from '../../assets/images/Projects/placeholder-images/nairobi-club-placeholder.jpg?project';
+// @ts-ignore
+import ravineDairiesImg from '../../assets/images/Projects/placeholder-images/ravine-dairies.jpg?project';
+// @ts-ignore
+import rositaImg from '../../assets/images/Projects/placeholder-images/rosita-placeholder.jpeg?project';
+// @ts-ignore
+import sanergyImg from '../../assets/images/Projects/placeholder-images/sanergy.jpg?project';
+// @ts-ignore
+import sanofiImg from '../../assets/images/Projects/placeholder-images/sanofi-placeholder.jpg?project';
+// @ts-ignore
+import scJohnsonImg from '../../assets/images/Projects/placeholder-images/sc-johnson.jpg?project';
+// @ts-ignore
+import vegaImg from '../../assets/images/Projects/placeholder-images/vega-placeholder.jpg?project';
+// @ts-ignore
+import vertImg from '../../assets/images/Projects/placeholder-images/vert-placeholder.jpg?project';
 
 interface ProjectsGridProps {
   activeFilter: FilterCategory;
