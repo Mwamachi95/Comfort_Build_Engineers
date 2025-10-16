@@ -106,7 +106,7 @@ const ProjectsFilterBar: FC<ProjectsFilterBarProps> = ({
   return (
     <section ref={filterBarRef} className="bg-white py-12 border-b border-neutral-100" role="region" aria-label="Project filter options">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-start">
+        <div className="flex justify-start relative">
           <div className="flex flex-wrap justify-start gap-3 md:gap-4 max-w-full">
             {filterCategories.map((category) => {
               const isActive = activeFilter === category;

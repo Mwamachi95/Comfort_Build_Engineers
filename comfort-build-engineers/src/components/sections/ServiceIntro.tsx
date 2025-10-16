@@ -63,7 +63,7 @@ const ServiceIntro: React.FC<ServiceIntroProps> = ({
       {/* Two-Column Content Section - 50vh on desktop */}
       <div className="w-full md:min-h-[50vh] bg-white pt-8 md:pt-12 lg:pt-16 pb-8 md:pb-12 lg:pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start relative">
 
           {/* Left Column - Tagline */}
           <motion.div

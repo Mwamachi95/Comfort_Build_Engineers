@@ -25,7 +25,7 @@ const VisionMissionHero: FC = () => {
   return (
     <section className="bg-white text-neutral-900 py-16 md:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row min-h-[600px] gap-8 lg:gap-12">
+        <div className="flex flex-col lg:flex-row min-h-[600px] gap-8 lg:gap-12 relative">
           {/* Left Side - Content */}
           <motion.div 
             className="lg:w-3/5 flex flex-col"

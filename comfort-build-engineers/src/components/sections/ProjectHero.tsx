@@ -42,7 +42,7 @@ const ProjectHero: FC<ProjectHeroProps> = ({
       {/* Hero Content */}
       <section className="relative z-10 bg-neutral-50 py-20 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-left max-w-4xl">
+          <div className="text-left max-w-4xl relative">
             {/* Project Title Label */}
             <motion.div
               className="mb-4"

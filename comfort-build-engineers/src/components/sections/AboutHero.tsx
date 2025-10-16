@@ -6,7 +6,7 @@ const AboutHero: FC = () => {
   return (
     <section className="bg-neutral-50 py-20 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between">
+        <div className="flex flex-col md:flex-row items-center justify-between relative">
           {/* Left side - Text content */}
           <motion.div 
             className="md:w-3/5 md:pr-8 lg:pr-12 mb-12 md:mb-0"
