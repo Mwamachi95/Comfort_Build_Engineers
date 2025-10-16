@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import SEO from '../components/common/SEO';
 import ProjectsHero from '../components/sections/ProjectsHero';
 import ProjectsFilterBar, { type FilterCategory } from '../components/sections/ProjectsFilterBar';
 import ProjectsGrid from '../components/sections/ProjectsGrid';
@@ -35,14 +36,22 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <ProjectsHero />
-      <ProjectsFilterBar
-        onFilterChange={handleFilterChange}
-        activeFilter={activeFilter}
+    <>
+      <SEO
+        title="Our Projects"
+        description="Explore Comfort Build Engineers' portfolio of successful MEP engineering projects across Kenya. From commercial buildings to industrial facilities, discover our expertise in mechanical, electrical, and plumbing solutions."
+        canonicalUrl="/projects"
+        keywords="MEP projects Kenya, engineering portfolio, completed projects, commercial projects, industrial projects, Nairobi engineering projects"
       />
-      <ProjectsGrid activeFilter={activeFilter} />
-    </div>
+      <div className="min-h-screen bg-white">
+        <ProjectsHero />
+        <ProjectsFilterBar
+          onFilterChange={handleFilterChange}
+          activeFilter={activeFilter}
+        />
+        <ProjectsGrid activeFilter={activeFilter} />
+      </div>
+    </>
   );
 };
 

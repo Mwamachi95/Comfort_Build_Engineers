@@ -32,7 +32,7 @@ const BackToTop: React.FC = () => {
         hover: '#4A6B75'
       };
     }
-    if (location.pathname === '/faqs') {
+    if (location.pathname.startsWith('/blog')) {
       return {
         bg: '#808C27',
         hover: '#6B7521'
@@ -42,12 +42,6 @@ const BackToTop: React.FC = () => {
       return {
         bg: '#82AD9C',
         hover: '#6B9688'
-      };
-    }
-    if (location.pathname.startsWith('/blog')) {
-      return {
-        bg: '#A43D39', // Default to home color for blog
-        hover: '#8B3530'
       };
     }
     // Default colors (Home page fallback)

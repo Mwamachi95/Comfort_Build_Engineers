@@ -11,8 +11,10 @@ import {
   CheckCircleIcon,
   XCircleIcon
 } from '@heroicons/react/24/outline';
+import SEO from '../components/common/SEO';
 import { contactFormSchema, type ContactFormSchema } from '../utils/contactValidation';
 import { contactInfo } from '../data/contact';
+import { localBusinessSchema } from '../data/seo';
 
 const Contact: React.FC = () => {
   const [formspreeState, handleFormspreeSubmit] = useFormspree("xrbyrlkn");
@@ -57,7 +59,15 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <SEO
+        title="Contact Us"
+        description="Get in touch with Comfort Build Engineers for all your MEP engineering needs in Kenya. Contact us via phone, email, or visit our office in Nairobi. We're here to help with your mechanical, electrical, and plumbing projects."
+        canonicalUrl="/contact"
+        keywords="contact CBE, MEP engineering Nairobi, contact engineers Kenya, engineering consultation, CBE contact details"
+        structuredData={localBusinessSchema}
+      />
+      <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left Column - Contact Information */}
@@ -349,6 +359,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

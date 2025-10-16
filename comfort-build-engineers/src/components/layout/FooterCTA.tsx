@@ -21,8 +21,8 @@ const FooterCTA: React.FC = () => {
     if (location.pathname.startsWith('/projects') || location.pathname.startsWith('/project/')) {
       return '#5A7E8C'; // Green blue for Projects
     }
-    if (location.pathname === '/faqs') {
-      return '#808C27'; // Green yellow for FAQs
+    if (location.pathname === '/blog') {
+      return '#808C27'; // Green yellow for Blog
     }
     if (location.pathname === '/services' || location.pathname.startsWith('/services#')) {
       return '#82AD9C'; // Green for Services
@@ -61,7 +61,7 @@ const FooterCTA: React.FC = () => {
         copied: '#F2F2F2'
       };
     }
-    if (location.pathname === '/faqs') {
+    if (location.pathname === '/blog') {
       return {
         default: '#6B7521',
         hover: '#434B15', // Much darker green-yellow for better contrast
@@ -100,16 +100,13 @@ const FooterCTA: React.FC = () => {
     if (pathname.startsWith('/services')) {
       return "Let's explore how our expertise can solve your specific challenges.";
     }
-    if (pathname === '/faqs') {
-      return "Still have questions? We'd love to provide personalized answers.";
-    }
     if (pathname.startsWith('/blog')) {
       return "Want to discuss how this applies to your project? We're here to help.";
     }
     if (pathname === '/contact') {
       return "Ready to bring your project to life? We'd love to hear from you.";
     }
-    
+
     // Default fallback message
     return "Ready to bring your project to life? We'd love to hear from you.";
   };

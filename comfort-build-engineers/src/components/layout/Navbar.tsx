@@ -31,7 +31,7 @@ const navigation = [
   { name: 'About Us', href: '/about' },
   { name: 'Services', href: '/services', hasDropdown: true },
   { name: 'Projects', href: '/projects', hasDropdown: true },
-  { name: 'FAQs', href: '/faqs' },
+  { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
     if (href === '/about') return '#D9A91A';
     if (href === '/services' || href.startsWith('/services#')) return '#82AD9C';
     if (href === '/projects' || href.startsWith('/projects/') || href.startsWith('/project/')) return '#5A7E8C';
-    if (href === '/faqs') return '#808C27';
+    if (href === '/blog') return '#808C27';
     if (href === '/contact') return '#A67458';
     return '#A43D39'; // Default home color
   };
@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
     if (href === '/about' && location.pathname === '/about') return true;
     if (href === '/services' && (location.pathname === '/services' || location.pathname.startsWith('/services#'))) return true;
     if (href === '/projects' && (location.pathname === '/projects' || location.pathname.startsWith('/projects/'))) return true;
-    if (href === '/faqs' && location.pathname === '/faqs') return true;
+    if (href === '/blog' && location.pathname === '/blog') return true;
     if (href === '/contact' && location.pathname === '/contact') return true;
     
     // Check for services hash links
@@ -114,7 +114,7 @@ const Navbar: React.FC = () => {
         ring: '#5A7E8C'
       };
     }
-    if (location.pathname === '/faqs') {
+    if (location.pathname === '/blog') {
       return {
         bg: '#808C27',
         hover: '#6B7521',

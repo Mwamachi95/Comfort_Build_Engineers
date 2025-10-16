@@ -77,7 +77,7 @@ const ServiceSegmentsGrid: React.FC<ServiceSegmentsGridProps> = ({ service }) =>
   const activeCard = getSegmentIdFromKey(activeCardKey);
   const isActiveCardValid = activeCard && segments.some(s => s.id === activeCard);
   // Helper function to get grid template columns based on row and column
-  const getGridTemplateColumns = useCallback((row: number, col: number) => {
+  const getGridTemplateColumns = useCallback((_row: number, col: number) => {
     if (col === 0) return '1.5fr 0.75fr 0.75fr';
     if (col === 1) return '0.75fr 1.5fr 0.75fr';
     if (col === 2) return '0.75fr 0.75fr 1.5fr';

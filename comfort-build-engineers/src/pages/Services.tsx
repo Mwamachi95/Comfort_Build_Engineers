@@ -2,11 +2,13 @@ import React, { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import SEO from '../components/common/SEO';
 import { services } from '../data/services';
 import { getServiceIntroBySlug } from '../data/serviceIntros';
 import ServiceSection from '../components/sections/ServiceSection';
 import ServiceIntro from '../components/sections/ServiceIntro';
 import PipelineMaintenanceSvg from '../assets/images/Service-page/Hero/Pipeline-maintenance-rafiki.svg';
+import { generateServiceSchema } from '../data/seo';
 
 // Helper function to darken a hex color
 const getDarkerColor = (hex: string): string => {
@@ -59,10 +61,26 @@ const Services: React.FC = () => {
     }
   }, [location]);
 
+  // Create combined service schema for all services
+  const servicesSchema = {
+    '@context': 'https://schema.org',
+    '@graph': services.map(service =>
+      generateServiceSchema(service.name, service.description)
+    ),
+  };
+
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="bg-neutral-50 py-20 md:py-24">
+    <>
+      <SEO
+        title="Our Services"
+        description="Comprehensive MEP engineering solutions in Kenya. Explore our mechanical, electrical, plumbing, factory planning, cold chain, and industrial engineering services for industrial, commercial, and residential projects."
+        canonicalUrl="/services"
+        keywords="MEP services Kenya, mechanical engineering services, electrical engineering services, plumbing services, HVAC installation, industrial engineering, factory planning, cold chain solutions"
+        structuredData={servicesSchema}
+      />
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="bg-neutral-50 py-20 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between">
             {/* Left side - Text content */}
@@ -209,6 +227,7 @@ const Services: React.FC = () => {
       </div>
 
     </div>
+    </>
   );
 };
 
