@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
+import { useForm as useFormspree } from '@formspree/react';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { motion } from 'framer-motion';
-import { 
-  PhoneIcon, 
-  EnvelopeIcon, 
-  MapPinIcon, 
-  ClockIcon 
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  PhoneIcon,
+  EnvelopeIcon,
+  MapPinIcon,
+  ClockIcon,
+  CheckCircleIcon,
+  XCircleIcon
 } from '@heroicons/react/24/outline';
 import { contactFormSchema, type ContactFormSchema } from '../utils/contactValidation';
 import { contactInfo } from '../data/contact';
 
 const Contact: React.FC = () => {
+  const [formspreeState, handleFormspreeSubmit] = useFormspree("xrbyrlkn");
+  const [showMessage, setShowMessage] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -21,23 +27,32 @@ const Contact: React.FC = () => {
     resolver: zodResolver(contactFormSchema),
   });
 
+  // Watch for successful submission
+  useEffect(() => {
+    if (formspreeState.succeeded) {
+      reset();
+      setShowMessage(true);
+
+      // Hide success message after 5 seconds
+      const timer = setTimeout(() => {
+        setShowMessage(false);
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [formspreeState.succeeded, reset]);
+
   const onSubmit = async (data: ContactFormSchema) => {
     try {
-      // TODO: Implement actual form submission logic
-      console.log('Form submitted:', data);
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Reset form on successful submission
-      reset();
-      
-      // TODO: Show success message to user
-      alert('Thank you for your message! We will get back to you soon.');
+      console.log('Submitting form data:', data);
+      console.log('Formspree state before submit:', formspreeState);
+
+      // Submit to Formspree
+      await handleFormspreeSubmit(data);
+
+      console.log('Formspree state after submit:', formspreeState);
     } catch (error) {
       console.error('Form submission error:', error);
-      // TODO: Show error message to user
-      alert('There was an error submitting your message. Please try again.');
     }
   };
 
@@ -183,6 +198,39 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="bg-neutral-50 rounded-xl p-8 lg:p-10"
           >
+            {/* Success/Error Messages */}
+            <AnimatePresence>
+              {formspreeState.succeeded && showMessage && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-start space-x-3"
+                >
+                  <CheckCircleIcon className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-semibold text-green-900 font-heading">Message Sent Successfully!</h3>
+                    <p className="text-sm text-green-700 mt-1">Thank you for contacting us. We'll get back to you soon.</p>
+                  </div>
+                </motion.div>
+              )}
+
+              {formspreeState.errors && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-start space-x-3"
+                >
+                  <XCircleIcon className="h-6 w-6 text-red-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-semibold text-red-900 font-heading">Submission Error</h3>
+                    <p className="text-sm text-red-700 mt-1">There was an error submitting your message. Please try again.</p>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               {/* Name Fields Row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -276,24 +324,24 @@ const Contact: React.FC = () => {
               <div className="pt-4">
                 <button
                   type="submit"
-                  disabled={isSubmitting}
+                  disabled={isSubmitting || formspreeState.submitting}
                   className="w-full px-6 py-3 text-base font-semibold text-white rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed font-heading"
-                  style={{ 
+                  style={{
                     backgroundColor: '#A67458',
                     '--tw-ring-color': '#A67458'
                   } as React.CSSProperties}
                   onMouseEnter={(e) => {
-                    if (!isSubmitting) {
+                    if (!isSubmitting && !formspreeState.submitting) {
                       (e.target as HTMLElement).style.backgroundColor = '#8F6147';
                     }
                   }}
                   onMouseLeave={(e) => {
-                    if (!isSubmitting) {
+                    if (!isSubmitting && !formspreeState.submitting) {
                       (e.target as HTMLElement).style.backgroundColor = '#A67458';
                     }
                   }}
                 >
-                  {isSubmitting ? 'Submitting...' : 'Submit'}
+                  {isSubmitting || formspreeState.submitting ? 'Sending...' : 'Send Message'}
                 </button>
               </div>
             </form>

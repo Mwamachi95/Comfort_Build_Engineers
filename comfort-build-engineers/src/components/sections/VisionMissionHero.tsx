@@ -36,32 +36,40 @@ const VisionMissionHero: FC = () => {
           >
             {/* Top Content */}
             <div className="flex-grow">
-              {/* Section Label */}
-              <motion.div 
-                className="mb-6"
+              {/* Vision Section */}
+              <motion.div
+                className="mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <span className="text-sm font-semibold tracking-wider uppercase text-neutral-600 font-heading">
-                  Our Vision and Mission
+                <span className="text-sm font-semibold tracking-wider uppercase text-neutral-600 font-heading mb-4 block">
+                  Our Vision
                 </span>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-neutral-900">
+                  We focus on the holistic solutions for our Partners, holistic growth for our Employees and our Business
+                </h2>
               </motion.div>
 
-              {/* Main Heading */}
-              <motion.h2 
-                className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-8 font-heading text-neutral-900"
+              {/* Mission Section */}
+              <motion.div
+                className="mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                We focus on the holistic solutions for our Partners, holistic growth for our Employees and our Business providing solutions through a{' '}
-                <span className="text-red-600 font-bold">reliable</span>,{' '}
-                <span className="text-green-600 font-bold">dependable</span> and{' '}
-                <span className="text-yellow-600 font-bold">client-focused</span> team.
-              </motion.h2>
+                <span className="text-sm font-semibold tracking-wider uppercase text-neutral-600 font-heading mb-4 block">
+                  Our Mission
+                </span>
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-neutral-900">
+                  Provide solutions through a{' '}
+                  <span className="font-bold" style={{ color: '#B8901C' }}>reliable</span>,{' '}
+                  <span className="font-bold" style={{ color: '#F2C84B' }}>dependable</span> and{' '}
+                  <span className="font-bold" style={{ color: '#D9A91A' }}>client-focused</span> team
+                </h3>
+              </motion.div>
 
               {/* Body Paragraph */}
               <motion.p 
