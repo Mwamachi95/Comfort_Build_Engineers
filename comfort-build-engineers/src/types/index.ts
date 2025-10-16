@@ -86,9 +86,14 @@ export interface ContactFormData {
   message: string;
 }
 
+export interface Picture {
+  img: { src: string; w: number; h: number };
+  sources: { [key: string]: Array<{ src: string; w: number; h: number }> };
+}
+
 export interface ServiceIntroData {
   serviceSlug: string;
-  heroImage: string;
+  heroImage: Picture;
   heroImageAlt: string;
   tagline: string;
   overview: {
