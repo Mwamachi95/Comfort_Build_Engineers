@@ -5,6 +5,8 @@ import electricalImage from '../assets/images/home/services/electrical.jpg';
 import factoryPlanningImage from '../assets/images/home/services/factory-planning.jpg';
 import projectManagementImage from '../assets/images/home/services/project-management.jpg';
 import designBuildImage from '../assets/images/home/services/design-build.jpg';
+import procurementSupportImage from '../assets/images/home/services/procurement-support-services.jpg';
+import riskManagementImage from '../assets/images/home/services/risk-management.jpg';
 
 export const serviceIntros: ServiceIntroData[] = [
   {
@@ -89,6 +91,34 @@ export const serviceIntros: ServiceIntroData[] = [
     approach: {
       title: 'Approach',
       content: 'We bring together designers, engineers, and construction professionals from project inception, fostering collaboration that eliminates design-construction conflicts. Our team develops value-engineered solutions, manages all permits and approvals, procures materials efficiently, and executes installations with direct oversight. This unified approach accelerates timelines, controls costs, and ensures your vision is realized with precision and quality.',
+    },
+  },
+  {
+    serviceSlug: 'procurement-support',
+    heroImage: procurementSupportImage,
+    heroImageAlt: 'Procurement Support Services - Factory Equipment and Machinery Acquisition',
+    tagline: 'Expert procurement guidance and technical evaluation ensuring you acquire the right industrial equipment at optimal value, delivered on time and ready for seamless integration into your operations.',
+    overview: {
+      title: 'Overview',
+      content: 'Our procurement support services provide comprehensive assistance in sourcing, evaluating, and acquiring factory equipment and machinery for industrial facilities. We leverage our technical expertise and industry networks to help clients make informed purchasing decisions, negotiate favorable terms, and ensure equipment specifications align with operational requirements and long-term business objectives.',
+    },
+    approach: {
+      title: 'Approach',
+      content: 'We begin with detailed needs assessment and technical specification development, then identify qualified suppliers and evaluate proposals based on performance, reliability, and lifecycle costs. Our team conducts factory acceptance testing, manages logistics coordination, and oversees installation supervision to ensure equipment arrives as specified and integrates smoothly with existing systems and processes.',
+    },
+  },
+  {
+    serviceSlug: 'risk-management',
+    heroImage: riskManagementImage,
+    heroImageAlt: 'Risk Management Services - MEP Project Risk Assessment and Mitigation',
+    tagline: 'Proactive risk identification and mitigation strategies protecting your MEP projects and facilities from technical, financial, and operational uncertainties throughout the entire project lifecycle.',
+    overview: {
+      title: 'Overview',
+      content: 'Our risk management services provide systematic identification, assessment, and mitigation of potential risks affecting mechanical, electrical, and plumbing projects. We help clients anticipate challenges, develop contingency plans, and implement control measures that minimize project delays, cost overruns, and operational disruptions while ensuring safety, compliance, and business continuity.',
+    },
+    approach: {
+      title: 'Approach',
+      content: 'We conduct comprehensive risk assessments examining technical, contractual, financial, and safety aspects of MEP projects and facilities. Our team develops risk registers, implements monitoring protocols, and creates mitigation strategies tailored to each project\'s unique challenges. Through continuous risk tracking and adaptive management, we help clients make informed decisions and respond effectively to emerging threats throughout project execution and facility operations.',
     },
   },
 ];

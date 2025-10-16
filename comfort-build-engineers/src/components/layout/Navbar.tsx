@@ -16,6 +16,8 @@ const services = [
   { name: 'Factory Planning', href: '/services#factory-planning' },
   { name: 'Project Management', href: '/services#project-management' },
   { name: 'Design & Build', href: '/services#design-build' },
+  { name: 'Procurement Support', href: '/services#procurement-support' },
+  { name: 'Risk Management', href: '/services#risk-management' },
 ];
 
 const projects = [

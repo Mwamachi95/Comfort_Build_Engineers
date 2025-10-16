@@ -5,6 +5,8 @@ import electricalLogo from '../assets/images/service-page/service-logos/electric
 import factoryPlanningLogo from '../assets/images/service-page/service-logos/factory_planning.svg';
 import projectManagementLogo from '../assets/images/service-page/service-logos/project_management.svg';
 import designBuildLogo from '../assets/images/service-page/service-logos/design_&_build.svg';
+import procurementSupportLogo from '../assets/images/service-page/service-logos/procurement_support_services.svg';
+import riskManagementLogo from '../assets/images/service-page/service-logos/risk_assessment.svg';
 
 export const services: Service[] = [
   {
@@ -291,6 +293,102 @@ export const services: Service[] = [
         id: '6',
         title: 'Turnkey Project Delivery',
         description: 'Complete project delivery from design through commissioning with single-point accountability.',
+        position: { row: 1, col: 2 }
+      }
+    ]
+  },
+  {
+    id: '7',
+    name: 'Procurement Support Services for Factory Equipment and Machinery',
+    title: 'Procurement Support',
+    description: 'Expert procurement guidance and technical evaluation ensuring you acquire the right industrial equipment at optimal value.',
+    icon: 'shopping-cart',
+    logo: procurementSupportLogo,
+    slug: 'procurement-support',
+    color: '#A68F97',
+    segments: [
+      {
+        id: '1',
+        title: 'Equipment Specification Development',
+        description: 'Comprehensive technical specifications defining performance requirements, capacity needs, and compatibility criteria ensuring equipment procurement aligns with operational goals and facility constraints.',
+        position: { row: 0, col: 0 }
+      },
+      {
+        id: '2',
+        title: 'Supplier Identification & Qualification',
+        description: 'Strategic sourcing and vetting of equipment manufacturers and suppliers worldwide, evaluating reputation, technical capabilities, warranty support, and after-sales service reliability.',
+        position: { row: 0, col: 1 }
+      },
+      {
+        id: '3',
+        title: 'Technical Bid Evaluation',
+        description: 'Detailed analysis and comparison of equipment proposals assessing technical compliance, performance specifications, energy efficiency, maintenance requirements, and total cost of ownership.',
+        position: { row: 0, col: 2 }
+      },
+      {
+        id: '4',
+        title: 'Factory Acceptance Testing (FAT)',
+        description: 'On-site equipment inspection and performance verification at manufacturer facilities ensuring machinery meets specifications, quality standards, and operational requirements before shipment.',
+        position: { row: 1, col: 0 }
+      },
+      {
+        id: '5',
+        title: 'Logistics & Import Coordination',
+        description: 'Complete management of shipping, customs clearance, import documentation, and delivery logistics ensuring equipment arrives safely, on schedule, and in compliance with Kenyan regulations.',
+        position: { row: 1, col: 1 }
+      },
+      {
+        id: '6',
+        title: 'Installation Supervision & Commissioning Support',
+        description: 'Technical oversight during equipment installation, startup, and performance testing ensuring proper integration with facility systems and achieving specified operational performance.',
+        position: { row: 1, col: 2 }
+      }
+    ]
+  },
+  {
+    id: '8',
+    name: 'Risk Management Services',
+    title: 'Risk Management',
+    description: 'Proactive risk identification and mitigation strategies protecting your MEP projects and facilities from technical, financial, and operational uncertainties.',
+    icon: 'shield-check',
+    logo: riskManagementLogo,
+    slug: 'risk-management',
+    color: '#4B4952',
+    segments: [
+      {
+        id: '1',
+        title: 'Project Risk Assessment & Analysis',
+        description: 'Systematic evaluation of potential technical, schedule, cost, and quality risks during project planning and execution phases, prioritizing threats based on likelihood and impact severity.',
+        position: { row: 0, col: 0 }
+      },
+      {
+        id: '2',
+        title: 'Safety & Compliance Risk Management',
+        description: 'Identification and mitigation of workplace safety hazards, regulatory compliance gaps, and environmental risks ensuring adherence to Kenyan safety standards and industry best practices.',
+        position: { row: 0, col: 1 }
+      },
+      {
+        id: '3',
+        title: 'Contractual & Legal Risk Evaluation',
+        description: 'Analysis of contract terms, liability exposures, dispute potential, and legal obligations protecting client interests and minimizing contractual disputes in MEP project agreements.',
+        position: { row: 0, col: 2 }
+      },
+      {
+        id: '4',
+        title: 'Financial Risk Mitigation',
+        description: 'Assessment and management of budget risks, cost escalation factors, payment terms, and financial exposure developing strategies to control costs and protect project financial viability.',
+        position: { row: 1, col: 0 }
+      },
+      {
+        id: '5',
+        title: 'Technical Risk & Design Review',
+        description: 'Critical evaluation of design assumptions, system specifications, equipment selections, and technical dependencies identifying potential failure points and engineering vulnerabilities.',
+        position: { row: 1, col: 1 }
+      },
+      {
+        id: '6',
+        title: 'Business Continuity & Operational Risk Planning',
+        description: 'Development of contingency plans, backup systems, and emergency response protocols ensuring facility operations continue despite equipment failures, supply disruptions, or unforeseen events.',
         position: { row: 1, col: 2 }
       }
     ]

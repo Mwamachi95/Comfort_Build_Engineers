@@ -71,6 +71,20 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://www.cbengineers.co.ke/services/procurement-support</loc>
+    <lastmod>2025-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.cbengineers.co.ke/services/risk-management</loc>
+    <lastmod>2025-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Projects Page -->
   <url>
     <loc>https://www.cbengineers.co.ke/projects</loc>
