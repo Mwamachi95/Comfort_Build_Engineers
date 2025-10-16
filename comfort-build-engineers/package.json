@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "preinstall": "npm install --os=linux --cpu=x64 sharp @rollup/rollup-linux-x64-gnu || true",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",

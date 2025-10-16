@@ -1,5 +1,5 @@
 {
-  "installCommand": "npm install --include=optional --os=linux --cpu=x64",
+  "installCommand": "npm install --include=optional && npm install --os=linux --cpu=x64 sharp",
   "buildCommand": "npm run build",
   "rewrites": [
     {
