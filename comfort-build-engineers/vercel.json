@@ -1,11 +1,6 @@
 {
-  "build": {
-    "env": {
-      "SHARP_IGNORE_GLOBAL_LIBVIPS": "1",
-      "npm_config_sharp_binary_host": "https://github.com/lovell/sharp-libvips/releases/download",
-      "npm_config_sharp_libvips_binary_host": "https://github.com/lovell/sharp-libvips/releases/download"
-    }
-  },
+  "buildCommand": "echo 'Using pre-built dist folder'",
+  "outputDirectory": "dist",
   "rewrites": [
     {
       "source": "/(.*)",
