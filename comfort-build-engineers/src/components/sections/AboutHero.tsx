@@ -49,7 +49,7 @@ const AboutHero: FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              We are one of the leading building services solutions firm in East Africa that deals with mechanical, electrical, & plumbing building services design as well as process design, factory planning and project management.
+              CBE Consultants is one of East Africa's leading building services firms, specializing in mechanical, electrical, and plumbing design, as well as process design, factory planning, and project management.
             </motion.p>
           </motion.div>
 

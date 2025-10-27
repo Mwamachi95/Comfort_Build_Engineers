@@ -9,12 +9,12 @@ const CompanyBackgroundText: FC = () => {
         <div className="w-full space-y-8">
           {/* Company Description - First Paragraph */}
           <p className="text-3xl md:text-4xl lg:text-5xl text-neutral-800 leading-tight">
-            We collaborate with architects and designers to deliver comfortable, functional spaces on time and within budget.
+            Through close collaboration with architects and designers, we deliver comfortable, functional spaces that meet both aesthetic and performance goals—on schedule and within budget.
           </p>
 
           {/* Company Description - Second Paragraph */}
           <p className="text-xl md:text-2xl lg:text-3xl text-neutral-800 leading-tight">
-            We are a dedicated team of engineers providing precise, efficient, and reliable project management and engineering solutions for factories, commercial, and residential buildings, ensuring every client's satisfaction and happiness.
+            Our dedicated team of engineers provides precise, efficient, and reliable project management and engineering solutions for factories, commercial, and residential buildings, ensuring every client's satisfaction and happiness.
           </p>
           
           {/* Our Services Button */}
