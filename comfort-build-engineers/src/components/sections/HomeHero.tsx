@@ -55,7 +55,7 @@ const HomeHero: FC = () => {
           >
             Professional engineering solutions for mechanical, electrical, and{' '}
             <span style={{ color: '#A43D39' }}>
-              plumbing services in Kenya.
+              plumbing services in East Africa.
             </span>
           </motion.h1>
 
