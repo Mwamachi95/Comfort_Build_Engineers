@@ -43,13 +43,13 @@ const AboutHero: FC = () => {
             </motion.h1>
 
             {/* Optional Subtext */}
-            <motion.p 
+            <motion.p
               className="text-base md:text-lg lg:text-xl text-neutral-600 leading-relaxed max-w-lg"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              With decades of combined experience, we deliver comprehensive engineering solutions that build trust, ensure quality, and exceed expectations across Kenya's industrial landscape.
+              We are one of the leading building services solutions firm in East Africa that deals with mechanical, electrical, & plumbing building services design as well as process design, factory planning and project management.
             </motion.p>
           </motion.div>
 
