@@ -25,8 +25,8 @@ const HomeHero: FC = () => {
       
       {/* Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-32">
-        <motion.div 
-          className="max-w-2xl"
+        <motion.div
+          className="max-w-2xl bg-white bg-opacity-40 backdrop-blur-sm rounded-lg p-6 sm:p-8 md:p-10"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -38,11 +38,11 @@ const HomeHero: FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span 
+            <span
               className="text-base font-bold tracking-wider uppercase font-heading"
               style={{ color: '#A43D39' }}
             >
-              Welcome to Comfort Build Engineers
+              We are Comfort Build Engineers - We create, design & innovate
             </span>
           </motion.div>
 
