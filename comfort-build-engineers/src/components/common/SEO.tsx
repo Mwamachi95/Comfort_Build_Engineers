@@ -16,7 +16,7 @@ const SEO: React.FC<SEOProps> = ({
   description,
   canonicalUrl,
   ogType = 'website',
-  ogImage = '/android-chrome-512x512.png',
+  ogImage = '/og-image.jpg',
   twitterCard = 'summary_large_image',
   keywords,
   structuredData,
