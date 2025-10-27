@@ -245,28 +245,30 @@ const Navbar: React.FC = () => {
               </div>
 
               {/* Right Section - CTA Button */}
-              <div className="hidden xl:block">
-                <Link
-                  to="/contact"
-                  className="text-white px-4 md:px-6 lg:px-8 py-2 md:py-3 rounded-md text-sm md:text-base font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 font-heading whitespace-nowrap"
-                  style={{
-                    backgroundColor: typeof ctaColors.bg === 'string' ? ctaColors.bg : undefined,
-                    '--tw-ring-color': ctaColors.ring
-                  } as React.CSSProperties}
-                  onMouseEnter={(e) => {
-                    if (typeof ctaColors.hover === 'string') {
-                      (e.target as HTMLElement).style.backgroundColor = ctaColors.hover;
-                    }
-                  }}
-                  onMouseLeave={(e) => {
-                    if (typeof ctaColors.bg === 'string') {
-                      (e.target as HTMLElement).style.backgroundColor = ctaColors.bg;
-                    }
-                  }}
-                >
-                  Request a Quote
-                </Link>
-              </div>
+              {location.pathname !== '/contact' && (
+                <div className="hidden xl:block">
+                  <Link
+                    to="/contact"
+                    className="text-white px-4 md:px-6 lg:px-8 py-2 md:py-3 rounded-md text-sm md:text-base font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 font-heading whitespace-nowrap"
+                    style={{
+                      backgroundColor: typeof ctaColors.bg === 'string' ? ctaColors.bg : undefined,
+                      '--tw-ring-color': ctaColors.ring
+                    } as React.CSSProperties}
+                    onMouseEnter={(e) => {
+                      if (typeof ctaColors.hover === 'string') {
+                        (e.target as HTMLElement).style.backgroundColor = ctaColors.hover;
+                      }
+                    }}
+                    onMouseLeave={(e) => {
+                      if (typeof ctaColors.bg === 'string') {
+                        (e.target as HTMLElement).style.backgroundColor = ctaColors.bg;
+                      }
+                    }}
+                  >
+                    Request a Quote
+                  </Link>
+                </div>
+              )}
 
               {/* Mobile, Tablet & iPad menu button */}
               <Disclosure.Button className="xl:hidden inline-flex items-center justify-center p-2 rounded-md text-neutral-700 hover:text-primary-red hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-red">
@@ -380,30 +382,32 @@ const Navbar: React.FC = () => {
                       </Link>
                     );
                   })}
-                  
+
                   {/* Mobile CTA Button - Right after Contact */}
-                  <div className="pt-4">
-                    <Link
-                      to="/contact"
-                      onClick={() => close()}
-                      className="block w-full text-center text-white px-6 py-3 sm:py-4 rounded-md text-base sm:text-lg font-semibold transition-colors duration-200 font-heading"
-                      style={{
-                        backgroundColor: typeof ctaColors.bg === 'string' ? ctaColors.bg : undefined
-                      }}
-                      onMouseEnter={(e) => {
-                        if (typeof ctaColors.hover === 'string') {
-                          (e.target as HTMLElement).style.backgroundColor = ctaColors.hover;
-                        }
-                      }}
-                      onMouseLeave={(e) => {
-                        if (typeof ctaColors.bg === 'string') {
-                          (e.target as HTMLElement).style.backgroundColor = ctaColors.bg;
-                        }
-                      }}
-                    >
-                      Request a Quote
-                    </Link>
-                  </div>
+                  {location.pathname !== '/contact' && (
+                    <div className="pt-4">
+                      <Link
+                        to="/contact"
+                        onClick={() => close()}
+                        className="block w-full text-center text-white px-6 py-3 sm:py-4 rounded-md text-base sm:text-lg font-semibold transition-colors duration-200 font-heading"
+                        style={{
+                          backgroundColor: typeof ctaColors.bg === 'string' ? ctaColors.bg : undefined
+                        }}
+                        onMouseEnter={(e) => {
+                          if (typeof ctaColors.hover === 'string') {
+                            (e.target as HTMLElement).style.backgroundColor = ctaColors.hover;
+                          }
+                        }}
+                        onMouseLeave={(e) => {
+                          if (typeof ctaColors.bg === 'string') {
+                            (e.target as HTMLElement).style.backgroundColor = ctaColors.bg;
+                          }
+                        }}
+                      >
+                        Request a Quote
+                      </Link>
+                    </div>
+                  )}
                 </div>
                 
                 {/* Social Media Icons - Bottom */}
