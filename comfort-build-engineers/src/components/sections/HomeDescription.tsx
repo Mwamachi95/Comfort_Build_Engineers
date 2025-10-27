@@ -11,7 +11,12 @@ const HomeDescription: FC = () => {
           <p className="text-3xl md:text-4xl lg:text-5xl text-neutral-800 leading-tight">
             We are a leading engineering solutions firm that deals with mechanical, electrical and plumbing building services design, factory planning & process design, and project management.
           </p>
-          
+
+          {/* Subtext */}
+          <p className="text-base md:text-lg lg:text-xl text-neutral-600 leading-relaxed">
+            No building, be it a factory, a commercial building, a school or house is comfortable without well designed and built in services. At Comfort Build Engineers we ensure that you're working and/or living space is comfortable, delivered at an affordable cost & on time, according to your expectations and with consistent standards all through.
+          </p>
+
           {/* Our Services Button */}
           <div className="pt-4">
             <Link
