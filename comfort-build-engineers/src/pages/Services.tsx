@@ -119,13 +119,13 @@ const Services: React.FC = () => {
               </motion.h1>
 
               {/* Subtext */}
-              <motion.p 
+              <motion.p
                 className="text-base md:text-lg lg:text-xl text-neutral-600 leading-relaxed max-w-lg"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                From pipeline maintenance to industrial installations, we deliver precision engineering solutions that ensure safety, efficiency, and long-term reliability across Kenya's industrial landscape.
+                We deliver innovative Mechanical, Electrical, and Plumbing (MEP) design solutions for residential, commercial, and industrial buildings, combining efficiency, comfort, and sustainability. Each design merges technical precision with creative insight, ensuring systems that perform flawlessly while enhancing every space they serve.
               </motion.p>
             </motion.div>
 

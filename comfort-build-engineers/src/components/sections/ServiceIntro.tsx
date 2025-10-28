@@ -26,7 +26,6 @@ interface ServiceIntroProps {
 
 const ServiceIntro: React.FC<ServiceIntroProps> = ({
   serviceName,
-  serviceSlug,
   heroImage,
   heroImageAlt,
   serviceColor,
@@ -34,9 +33,16 @@ const ServiceIntro: React.FC<ServiceIntroProps> = ({
   overview,
   approach,
 }) => {
-  // Use white text and border for Factory Planning and Plumbing, service color for others
-  const titleColor = (serviceSlug === 'factory-planning' || serviceSlug === 'plumbing') ? '#FFFFFF' : serviceColor;
-  const borderColor = (serviceSlug === 'factory-planning' || serviceSlug === 'plumbing') ? '#FFFFFF' : serviceColor;
+  // Helper function to convert hex to rgba
+  const hexToRgba = (hex: string, alpha: number): string => {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  };
+
+  // Use service color for border
+  const borderColor = serviceColor;
   return (
     <section className="w-full flex flex-col">
       {/* Full-Width Hero Image - 50vh on desktop */}
@@ -58,8 +64,11 @@ const ServiceIntro: React.FC<ServiceIntroProps> = ({
         <div className="absolute bottom-0 left-0 w-full pb-6 md:pb-8 lg:pb-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading drop-shadow-lg border-l-8 pl-4 md:pl-6"
-              style={{ color: titleColor, borderColor: borderColor }}
+              className="inline-block text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-white border-l-8 pl-4 md:pl-6 pr-4 md:pr-6 py-3 md:py-4 lg:py-5 backdrop-blur-sm rounded-lg"
+              style={{
+                borderColor: borderColor,
+                backgroundColor: hexToRgba(serviceColor, 0.4)
+              }}
             >
               {serviceName}
             </h2>

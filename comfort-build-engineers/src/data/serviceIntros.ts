@@ -1,6 +1,6 @@
 import type { ServiceIntroData } from '../types';
 // @ts-ignore - vite-imagetools provides this type
-import mechanicalImage from '../assets/images/home/services/mechanical.jpg?service';
+import mechanicalImage from '../assets/images/home/services/mechanical-1.jpg?service';
 // @ts-ignore
 import plumbingImage from '../assets/images/home/services/plumbing.jpg?service';
 // @ts-ignore
@@ -12,9 +12,9 @@ import projectManagementImage from '../assets/images/home/services/project-manag
 // @ts-ignore
 import designBuildImage from '../assets/images/home/services/design-build.jpg?service';
 // @ts-ignore
-import procurementSupportImage from '../assets/images/home/services/procurement-support-services.jpg?service';
+import procurementSupportImage from '../assets/images/home/services/process-equipment.jpg?service';
 // @ts-ignore
-import riskManagementImage from '../assets/images/home/services/risk-management.jpg?service';
+import riskManagementImage from '../assets/images/home/services/risk-matrix.png?service';
 
 export const serviceIntros: ServiceIntroData[] = [
   {
