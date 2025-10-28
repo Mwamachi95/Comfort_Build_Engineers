@@ -18,6 +18,26 @@ import bravaImg5 from '../assets/images/Projects/per-project/brava-foods/5.jpg?p
 import bravaImg6 from '../assets/images/Projects/per-project/brava-foods/6.jpg?project';
 // @ts-ignore
 import bravaImg8 from '../assets/images/Projects/per-project/brava-foods/8.jpg?project';
+// @ts-ignore
+import brava1 from '../assets/images/Projects/per-project/brava-foods/brava-1.jpg?project';
+// @ts-ignore
+import brava2 from '../assets/images/Projects/per-project/brava-foods/brava-2.jpg?project';
+// @ts-ignore
+import brava3 from '../assets/images/Projects/per-project/brava-foods/brava-3.jpg?project';
+// @ts-ignore
+import brava4 from '../assets/images/Projects/per-project/brava-foods/brava-4.jpg?project';
+// @ts-ignore
+import brava5 from '../assets/images/Projects/per-project/brava-foods/brava-5.jpg?project';
+// @ts-ignore
+import brava6 from '../assets/images/Projects/per-project/brava-foods/brava-6.jpg?project';
+// @ts-ignore
+import brava7 from '../assets/images/Projects/per-project/brava-foods/brava-7.jpg?project';
+// @ts-ignore
+import brava8 from '../assets/images/Projects/per-project/brava-foods/brava-8.jpg?project';
+// @ts-ignore
+import brava9 from '../assets/images/Projects/per-project/brava-foods/brava-9.jpg?project';
+// @ts-ignore
+import brava10 from '../assets/images/Projects/per-project/brava-foods/brava-10.jpg?project';
 
 // @ts-ignore
 import ecobankHero from '../assets/images/Projects/per-project/ecobank/ecobank-hero.jpg?project';
@@ -28,6 +48,36 @@ import ecobankImg3 from '../assets/images/Projects/per-project/ecobank/3.jpg?pro
 // @ts-ignore
 import ecobankImg4 from '../assets/images/Projects/per-project/ecobank/4.jpg?project';
 
+// KCB Nyamira images
+// @ts-ignore
+import kcbHero from '../assets/images/Projects/per-project/kcb-nyamira/kcb-placeholder.jpg?project';
+// @ts-ignore
+import kcb1 from '../assets/images/Projects/per-project/kcb-nyamira/kcb-1.jpg?project';
+// @ts-ignore
+import kcb2 from '../assets/images/Projects/per-project/kcb-nyamira/kcb-2.jpg?project';
+// @ts-ignore
+import kcb3 from '../assets/images/Projects/per-project/kcb-nyamira/kcb-3.jpg?project';
+// @ts-ignore
+import kcb4 from '../assets/images/Projects/per-project/kcb-nyamira/kcb-4.jpg?project';
+// @ts-ignore
+import kcb5 from '../assets/images/Projects/per-project/kcb-nyamira/kcb-5.jpg?project';
+// @ts-ignore
+import kcb6 from '../assets/images/Projects/per-project/kcb-nyamira/kcb-6.jpg?project';
+// @ts-ignore
+import kcb7 from '../assets/images/Projects/per-project/kcb-nyamira/kcb-7.jpg?project';
+// @ts-ignore
+import kcb8 from '../assets/images/Projects/per-project/kcb-nyamira/kcb-8.jpg?project';
+// @ts-ignore
+import kcb9 from '../assets/images/Projects/per-project/kcb-nyamira/kcb-9.jpg?project';
+// @ts-ignore
+import kcb10 from '../assets/images/Projects/per-project/kcb-nyamira/kcb-10.jpg?project';
+// @ts-ignore
+import kcb11 from '../assets/images/Projects/per-project/kcb-nyamira/kcb-11.jpg?project';
+// @ts-ignore
+import kcb12 from '../assets/images/Projects/per-project/kcb-nyamira/kcb-12.jpg?project';
+// @ts-ignore
+import kcb13 from '../assets/images/Projects/per-project/kcb-nyamira/kcb-13.jpg?project';
+
 // Lynx Apartments images
 // @ts-ignore
 import lynxHero from '../assets/images/Projects/per-project/lynx-apartments/hero.jpg?project';
@@ -37,6 +87,20 @@ import lynxImg2 from '../assets/images/Projects/per-project/lynx-apartments/2.jp
 import lynxImg3 from '../assets/images/Projects/per-project/lynx-apartments/3.jpg?project';
 // @ts-ignore
 import lynxImg4 from '../assets/images/Projects/per-project/lynx-apartments/4.jpg?project';
+
+// Origen images
+// @ts-ignore
+import origenHero from '../assets/images/Projects/per-project/origen/origen-placeholder.jpg?project';
+// @ts-ignore
+import origen1 from '../assets/images/Projects/per-project/origen/origen-1.jpg?project';
+// @ts-ignore
+import origen2 from '../assets/images/Projects/per-project/origen/origen-2.jpg?project';
+// @ts-ignore
+import origen3 from '../assets/images/Projects/per-project/origen/origen-3.jpg?project';
+// @ts-ignore
+import origen4 from '../assets/images/Projects/per-project/origen/origen-4.jpg?project';
+// @ts-ignore
+import origen5 from '../assets/images/Projects/per-project/origen/origen-5.jpg?project';
 
 // Ravine Dairies images
 // @ts-ignore
@@ -75,6 +139,26 @@ import sanergyImg4 from '../assets/images/Projects/per-project/sanergy/dryer.jpg
 import sanergyImg5 from '../assets/images/Projects/per-project/sanergy/drone-solar-2.jpg?project';
 // @ts-ignore
 import sanergyImg6 from '../assets/images/Projects/per-project/sanergy/drone-site-overview-4.jpg?project';
+// @ts-ignore
+import sanergy1 from '../assets/images/Projects/per-project/sanergy/sanergy-1.jpg?project';
+// @ts-ignore
+import sanergy2 from '../assets/images/Projects/per-project/sanergy/sanergy-2.jpg?project';
+// @ts-ignore
+import sanergy3 from '../assets/images/Projects/per-project/sanergy/sanergy-3.jpeg?project';
+// @ts-ignore
+import sanergy4 from '../assets/images/Projects/per-project/sanergy/sanergy-4.jpeg?project';
+// @ts-ignore
+import sanergy5 from '../assets/images/Projects/per-project/sanergy/sanergy-5.jpeg?project';
+// @ts-ignore
+import sanergy6 from '../assets/images/Projects/per-project/sanergy/sanergy-6.jpeg?project';
+// @ts-ignore
+import sanergy7 from '../assets/images/Projects/per-project/sanergy/sanergy-7.jpeg?project';
+// @ts-ignore
+import sanergy8 from '../assets/images/Projects/per-project/sanergy/sanergy-8.jpg?project';
+// @ts-ignore
+import sanergy9 from '../assets/images/Projects/per-project/sanergy/sanergy-9.jpg?project';
+// @ts-ignore
+import sanergy10 from '../assets/images/Projects/per-project/sanergy/sanergy-10.jpg?project';
 
 // Sanofi images
 // @ts-ignore
@@ -105,6 +189,34 @@ import vertImg6 from '../assets/images/Projects/per-project/vert/6.jpg?project';
 import vertImg7 from '../assets/images/Projects/per-project/vert/7.jpg?project';
 // @ts-ignore
 import vertImg8 from '../assets/images/Projects/per-project/vert/8.jpg?project';
+// @ts-ignore
+import vert1 from '../assets/images/Projects/per-project/vert/vert-1.jpg?project';
+// @ts-ignore
+import vert2 from '../assets/images/Projects/per-project/vert/vert-2.jpg?project';
+// @ts-ignore
+import vert3 from '../assets/images/Projects/per-project/vert/vert-3.jpg?project';
+// @ts-ignore
+import vert5 from '../assets/images/Projects/per-project/vert/vert-5.jpg?project';
+// @ts-ignore
+import vert6 from '../assets/images/Projects/per-project/vert/vert-6.jpg?project';
+// @ts-ignore
+import vert7 from '../assets/images/Projects/per-project/vert/vert-7.jpg?project';
+// @ts-ignore
+import vert8 from '../assets/images/Projects/per-project/vert/vert-8.jpg?project';
+// @ts-ignore
+import vert9 from '../assets/images/Projects/per-project/vert/vert-9.jpg?project';
+// @ts-ignore
+import vert10 from '../assets/images/Projects/per-project/vert/vert-10.jpg?project';
+// @ts-ignore
+import vert11 from '../assets/images/Projects/per-project/vert/vert-11.jpg?project';
+// @ts-ignore
+import vert12 from '../assets/images/Projects/per-project/vert/vert-12.jpg?project';
+// @ts-ignore
+import vert13 from '../assets/images/Projects/per-project/vert/vert-13.jpg?project';
+// @ts-ignore
+import vert14 from '../assets/images/Projects/per-project/vert/vert-14.jpg?project';
+// @ts-ignore
+import vert15 from '../assets/images/Projects/per-project/vert/vert-15.jpg?project';
 
 interface Picture {
   img: { src: string; w: number; h: number };
@@ -164,7 +276,7 @@ The project required intricate coordination between mechanical, electrical, and 
       'Building automation and control systems',
       'Emergency safety systems installation'
     ],
-    additionalImages: [bravaHero, bravaImg3, bravaImg4, bravaImg5, bravaImg6, bravaImg8]
+    additionalImages: [bravaHero, bravaImg3, bravaImg4, bravaImg5, bravaImg6, bravaImg8, brava1, brava2, brava3, brava4, brava5, brava6, brava7, brava8, brava9, brava10]
   },
   'ecobank': {
     id: 'ecobank',
@@ -204,6 +316,44 @@ The project required careful phasing to ensure continuous bank operations during
     ],
     additionalImages: [ecobankHero, ecobankImg2, ecobankImg3, ecobankImg4]
   },
+  'kcb-nyamira': {
+    id: 'kcb-nyamira',
+    title: 'KCB Nyamira Branch',
+    tagline: 'Modern Banking Facility with Comprehensive MEP Infrastructure',
+    heroImage: kcbHero,
+    introduction: 'Complete MEP Solutions for Modern Banking Operations',
+    description: `KCB Nyamira Branch represents a modern banking facility equipped with comprehensive MEP systems designed for efficient operations and customer comfort. Our team delivered complete mechanical, electrical, and plumbing solutions that meet stringent banking industry standards while ensuring energy efficiency and reliability.
+
+The project required careful coordination of HVAC systems, electrical infrastructure, fire safety systems, and security integration to create a functional, secure, and comfortable banking environment that serves the Nyamira community.`,
+    descriptionImage: kcb1,
+    services: [
+      {
+        title: 'HVAC System Design',
+        description: 'Energy-efficient climate control systems ensuring optimal comfort for customers and staff throughout the banking facility.'
+      },
+      {
+        title: 'Electrical Infrastructure',
+        description: 'Complete electrical design including power distribution, lighting systems, and backup power solutions for continuous operations.'
+      },
+      {
+        title: 'Fire Safety Systems',
+        description: 'Comprehensive fire detection and suppression systems compliant with banking industry safety regulations.'
+      },
+      {
+        title: 'Security Systems Integration',
+        description: 'MEP infrastructure supporting advanced security systems and access control for banking operations.'
+      }
+    ],
+    scope: [
+      'Complete HVAC system design and installation',
+      'Electrical power distribution and lighting systems',
+      'Fire safety and detection systems',
+      'Plumbing and water systems installation',
+      'Emergency backup power systems',
+      'Security systems MEP integration'
+    ],
+    additionalImages: [kcbHero, kcb1, kcb2, kcb3, kcb4, kcb5, kcb6, kcb7, kcb8, kcb9, kcb10, kcb11, kcb12, kcb13]
+  },
   'lynx-apartments': {
     id: 'lynx-apartments',
     title: 'Lynx Apartments',
@@ -241,6 +391,44 @@ The project incorporated advanced building management systems, energy-efficient 
       'Sustainable design integration'
     ],
     additionalImages: [lynxHero, lynxImg2, lynxImg3, lynxImg4]
+  },
+  'origen': {
+    id: 'origen',
+    title: 'Origen Enterprises',
+    tagline: 'Industrial MEP Infrastructure for Manufacturing Excellence',
+    heroImage: origenHero,
+    introduction: 'Comprehensive Industrial MEP Solutions',
+    description: `Origen Enterprises represents a sophisticated manufacturing facility equipped with comprehensive MEP systems designed to support industrial operations. Our team delivered complete mechanical, electrical, and plumbing solutions including process utilities, electrical infrastructure, and specialized ventilation systems tailored for manufacturing environments.
+
+The project required expertise in industrial-grade systems, process support infrastructure, and environmental controls to ensure optimal manufacturing conditions while maintaining energy efficiency and operational reliability.`,
+    descriptionImage: origen1,
+    services: [
+      {
+        title: 'Industrial HVAC Systems',
+        description: 'Heavy-duty ventilation and climate control systems designed for manufacturing environments with precise environmental controls.'
+      },
+      {
+        title: 'Process Utilities',
+        description: 'Specialized utility systems including compressed air, process water, and steam distribution for manufacturing operations.'
+      },
+      {
+        title: 'Electrical Infrastructure',
+        description: 'Industrial-grade electrical systems with high-capacity power distribution for manufacturing equipment and processes.'
+      },
+      {
+        title: 'Environmental Controls',
+        description: 'Advanced environmental monitoring and control systems ensuring optimal manufacturing conditions and compliance.'
+      }
+    ],
+    scope: [
+      'Industrial HVAC system design and installation',
+      'Process utility systems for manufacturing',
+      'High-capacity electrical infrastructure',
+      'Specialized ventilation systems',
+      'Environmental control and monitoring',
+      'Manufacturing support infrastructure'
+    ],
+    additionalImages: [origenHero, origen1, origen2, origen3, origen4, origen5]
   },
   'ravine-dairies': {
     id: 'ravine-dairies',
@@ -354,7 +542,7 @@ This unique project required specialized engineering for waste processing enviro
       'Sustainable energy system integration',
       'Waste processing equipment utility support'
     ],
-    additionalImages: [sanergyHero, sanergyImg2, sanergyImg3, sanergyImg4, sanergyImg5, sanergyImg6]
+    additionalImages: [sanergyHero, sanergyImg2, sanergyImg3, sanergyImg4, sanergyImg5, sanergyImg6, sanergy1, sanergy2, sanergy3, sanergy4, sanergy5, sanergy6, sanergy7, sanergy8, sanergy9, sanergy10]
   },
   'sanofi-office': {
     id: 'sanofi-office',
@@ -468,7 +656,7 @@ This project demonstrates our capability in managing complex food processing fac
       'Process support infrastructure',
       'Integrated project management and delivery'
     ],
-    additionalImages: [vertHero, vertImg2, vertImg3, vertImg4, vertImg6, vertImg7, vertImg8]
+    additionalImages: [vertHero, vertImg2, vertImg3, vertImg4, vertImg6, vertImg7, vertImg8, vert1, vert2, vert3, vert5, vert6, vert7, vert8, vert9, vert10, vert11, vert12, vert13, vert14, vert15]
   }
 };
 

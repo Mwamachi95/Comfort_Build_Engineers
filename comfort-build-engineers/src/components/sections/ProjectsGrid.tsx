@@ -8,7 +8,11 @@ import bravaFoodsImg from '../../assets/images/Projects/placeholder-images/brava
 // @ts-ignore
 import ecobankImg from '../../assets/images/Projects/placeholder-images/ecobank-placeholder.jpg?project';
 // @ts-ignore
+import kcbNyamiraImg from '../../assets/images/Projects/per-project/kcb-nyamira/kcb-placeholder.jpg?project';
+// @ts-ignore
 import lynxApartmentsImg from '../../assets/images/Projects/placeholder-images/lynx-apartments.jpg?project';
+// @ts-ignore
+import origenImg from '../../assets/images/Projects/per-project/origen/origen-placeholder.jpg?project';
 // @ts-ignore
 import ravineDairiesImg from '../../assets/images/Projects/placeholder-images/ravine-dairies.jpg?project';
 // @ts-ignore
@@ -44,12 +48,28 @@ const projects: Project[] = [
     link: '/project/ecobank'
   },
   {
+    id: 'kcb-nyamira',
+    title: 'KCB Nyamira Branch',
+    description: 'Complete MEP design and installation for modern banking facility featuring efficient HVAC, electrical systems, and fire safety infrastructure.',
+    image: kcbNyamiraImg,
+    categories: ['Commercial'],
+    link: '/project/kcb-nyamira'
+  },
+  {
     id: 'lynx-apartments',
     title: 'Lynx Apartments',
     description: 'Full MEP services for upscale residential development featuring smart building automation and energy-efficient systems.',
     image: lynxApartmentsImg,
     categories: ['Residential'],
     link: '/project/lynx-apartments'
+  },
+  {
+    id: 'origen',
+    title: 'Origen Enterprises',
+    description: 'Industrial MEP systems for manufacturing facility including process utilities, electrical infrastructure, and specialized ventilation systems.',
+    image: origenImg,
+    categories: ['Industrial'],
+    link: '/project/origen'
   },
   {
     id: 'ravine-dairies',
