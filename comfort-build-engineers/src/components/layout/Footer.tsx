@@ -67,15 +67,12 @@ const Footer: React.FC = () => {
             </div>
             <div className="space-y-4">
               <p className="text-neutral-600 text-sm">
-                Professional engineering solutions for mechanical, electrical, plumbing services, 
+                Professional engineering solutions for mechanical, electrical, plumbing services,
                 factory planning, and project management in Kenya.
               </p>
               <div className="space-y-2">
                 <p className="text-xs text-neutral-500">
                   Licensed Engineering Firm
-                </p>
-                <p className="text-xs text-neutral-500">
-                  Registration No: EBK/2024/001
                 </p>
               </div>
             </div>
@@ -224,7 +221,7 @@ const Footer: React.FC = () => {
                   >
                     {contactInfo.emergencyContact}
                   </a>
-                  <p className="text-xs text-neutral-500">Emergency Line</p>
+                  <p className="text-xs text-neutral-500">Alternate Line</p>
                 </div>
               </div>
 
@@ -263,7 +260,7 @@ const Footer: React.FC = () => {
               <div className="flex items-center space-x-4 pt-4">
                 <p className="text-xs text-neutral-500">Follow Us:</p>
                 <a
-                  href="https://linkedin.com/company/comfort-build-engineers"
+                  href="https://www.linkedin.com/company/comfortbuildengineers/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-neutral-600 transition-colors duration-200"
