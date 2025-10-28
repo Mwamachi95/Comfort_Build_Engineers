@@ -15,10 +15,7 @@ const Projects: React.FC = () => {
 
     const categoryMap: Record<string, FilterCategory> = {
       'commercial': 'Commercial',
-      'design-build': 'Design-Build',
-      'factory-planning': 'Factory Planning',
       'industrial': 'Industrial',
-      'project-management': 'Project Management',
       'residential': 'Residential'
     };
 

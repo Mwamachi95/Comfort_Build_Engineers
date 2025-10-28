@@ -12,10 +12,7 @@ import CBEIconUrl from '../../assets/icons/logo/CBE-Icon.svg';
 
 const projects = [
   { name: 'Commercial', href: '/projects/commercial' },
-  { name: 'Design-Build', href: '/projects/design-build' },
-  { name: 'Factory Planning', href: '/projects/factory-planning' },
   { name: 'Industrial', href: '/projects/industrial' },
-  { name: 'Project Management', href: '/projects/project-management' },
   { name: 'Residential', href: '/projects/residential' },
 ];
 

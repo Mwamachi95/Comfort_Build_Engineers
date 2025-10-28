@@ -38,16 +38,6 @@ import lynxImg3 from '../assets/images/Projects/per-project/lynx-apartments/3.jp
 // @ts-ignore
 import lynxImg4 from '../assets/images/Projects/per-project/lynx-apartments/4.jpg?project';
 
-// Nairobi Club images
-// @ts-ignore
-import nairobiClubHero from '../assets/images/Projects/per-project/nairobi-club/hero.jpg?project';
-// @ts-ignore
-import nairobiClubImg2 from '../assets/images/Projects/per-project/nairobi-club/nairobi-club.jpg?project';
-// @ts-ignore
-import nairobiClubImg3 from '../assets/images/Projects/per-project/nairobi-club/3.jpg?project';
-// @ts-ignore
-import nairobiClubImg4 from '../assets/images/Projects/per-project/nairobi-club/4.jpg?project';
-
 // Ravine Dairies images
 // @ts-ignore
 import ravineDairiesHero from '../assets/images/Projects/per-project/ravine-dairies/hero.jpg?project';
@@ -99,16 +89,6 @@ import sanofiImg4 from '../assets/images/Projects/per-project/sanofi/4.jpg?proje
 // SC Johnson images
 // @ts-ignore
 import scJohnsonHero from '../assets/images/Projects/per-project/sc-johnson/SC-Johnson.jpg?project';
-
-// Vega images
-// @ts-ignore
-import vegaHero from '../assets/images/Projects/per-project/vega/hero.jpg?project';
-// @ts-ignore
-import vegaImg2 from '../assets/images/Projects/per-project/vega/2.jpg?project';
-// @ts-ignore
-import vegaImg3 from '../assets/images/Projects/per-project/vega/3.jpg?project';
-// @ts-ignore
-import vegaImg4 from '../assets/images/Projects/per-project/vega/4.jpg?project';
 
 // Vert images
 // @ts-ignore
@@ -261,44 +241,6 @@ The project incorporated advanced building management systems, energy-efficient 
       'Sustainable design integration'
     ],
     additionalImages: [lynxHero, lynxImg2, lynxImg3, lynxImg4]
-  },
-  'nairobi-club': {
-    id: 'nairobi-club',
-    title: 'Nairobi Club Renovation',
-    tagline: 'Heritage Building Modernization with Contemporary MEP Solutions',
-    heroImage: nairobiClubHero,
-    introduction: 'Preserving Heritage While Embracing Modern Engineering',
-    description: `The Nairobi Club renovation project required delicate balance between preserving historical architecture and implementing modern MEP systems. Our team successfully upgraded the building's infrastructure while maintaining its character and heritage value.
-
-This challenging project demanded innovative solutions to integrate contemporary mechanical, electrical, and plumbing systems within the constraints of a heritage building, ensuring compliance with modern standards while respecting architectural integrity.`,
-    descriptionImage: nairobiClubImg2,
-    services: [
-      {
-        title: 'Heritage-Sensitive HVAC',
-        description: 'Climate control systems designed to preserve the building character while providing modern comfort.'
-      },
-      {
-        title: 'Electrical System Upgrade',
-        description: 'Comprehensive electrical modernization with minimal visual impact on historical features.'
-      },
-      {
-        title: 'Plumbing Infrastructure',
-        description: 'Updated plumbing systems integrated seamlessly within existing architectural elements.'
-      },
-      {
-        title: 'Conservation Engineering',
-        description: 'Specialized engineering solutions to protect and preserve heritage building elements.'
-      }
-    ],
-    scope: [
-      'Heritage-sensitive MEP system design',
-      'Electrical infrastructure modernization',
-      'HVAC system integration with minimal impact',
-      'Plumbing system upgrades and optimization',
-      'Fire safety system implementation',
-      'Building conservation compliance'
-    ],
-    additionalImages: [nairobiClubHero, nairobiClubImg2, nairobiClubImg3, nairobiClubImg4]
   },
   'ravine-dairies': {
     id: 'ravine-dairies',
@@ -489,44 +431,6 @@ This design-build project required coordination of complex manufacturing process
       'Design-build project management'
     ],
     additionalImages: [scJohnsonHero]
-  },
-  'vega-offices': {
-    id: 'vega-offices',
-    title: 'Vega Limited',
-    tagline: 'Sustainable Office Complex with Smart Building Controls',
-    heroImage: vegaHero,
-    introduction: 'Smart Building Technology for Modern Office Operations',
-    description: `Vega Limited features a modern office complex with sustainable MEP systems, smart building controls, and energy-efficient solutions. Our integrated approach combines advanced building technology with sustainable design principles to create an optimal working environment.
-
-This project showcases our expertise in both industrial and project management applications, delivering comprehensive MEP solutions that support modern business operations while prioritizing energy efficiency and environmental responsibility.`,
-    descriptionImage: vegaImg2,
-    services: [
-      {
-        title: 'Smart Building Controls',
-        description: 'Advanced building automation systems for optimal energy management and operational efficiency.'
-      },
-      {
-        title: 'Sustainable MEP Systems',
-        description: 'Energy-efficient mechanical, electrical, and plumbing systems designed for environmental sustainability.'
-      },
-      {
-        title: 'Office Infrastructure',
-        description: 'Modern office MEP infrastructure supporting contemporary business operations and technology.'
-      },
-      {
-        title: 'Energy Management',
-        description: 'Comprehensive energy monitoring and management systems for operational cost optimization.'
-      }
-    ],
-    scope: [
-      'Smart building automation system implementation',
-      'Sustainable MEP system design and installation',
-      'Energy-efficient office infrastructure',
-      'Building energy management systems',
-      'Modern office utility systems',
-      'Environmental sustainability integration'
-    ],
-    additionalImages: [vegaHero, vegaImg2, vegaImg3, vegaImg4]
   },
   'vert-processing': {
     id: 'vert-processing',

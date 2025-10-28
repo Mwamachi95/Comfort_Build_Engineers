@@ -5,10 +5,7 @@ import { motion } from 'framer-motion';
 type FilterCategory =
   | 'All'
   | 'Commercial'
-  | 'Design-Build'
-  | 'Factory Planning'
   | 'Industrial'
-  | 'Project Management'
   | 'Residential';
 
 interface ProjectsFilterBarProps {
@@ -19,10 +16,7 @@ interface ProjectsFilterBarProps {
 const filterCategories: FilterCategory[] = [
   'All',
   'Commercial',
-  'Design-Build',
-  'Factory Planning',
   'Industrial',
-  'Project Management',
   'Residential'
 ];
 
@@ -75,10 +69,7 @@ const ProjectsFilterBar: FC<ProjectsFilterBarProps> = ({
     const slugMap: Record<FilterCategory, string> = {
       'All': '',
       'Commercial': 'commercial',
-      'Design-Build': 'design-build',
-      'Factory Planning': 'factory-planning',
       'Industrial': 'industrial',
-      'Project Management': 'project-management',
       'Residential': 'residential'
     };
     return slugMap[category];

@@ -10,8 +10,6 @@ import ecobankImg from '../../assets/images/Projects/placeholder-images/ecobank-
 // @ts-ignore
 import lynxApartmentsImg from '../../assets/images/Projects/placeholder-images/lynx-apartments.jpg?project';
 // @ts-ignore
-import nairobiClubImg from '../../assets/images/Projects/placeholder-images/nairobi-club-placeholder.jpg?project';
-// @ts-ignore
 import ravineDairiesImg from '../../assets/images/Projects/placeholder-images/ravine-dairies.jpg?project';
 // @ts-ignore
 import rositaImg from '../../assets/images/Projects/placeholder-images/rosita-placeholder.jpeg?project';
@@ -21,8 +19,6 @@ import sanergyImg from '../../assets/images/Projects/placeholder-images/sanergy.
 import sanofiImg from '../../assets/images/Projects/placeholder-images/sanofi-placeholder.jpg?project';
 // @ts-ignore
 import scJohnsonImg from '../../assets/images/Projects/placeholder-images/sc-johnson.jpg?project';
-// @ts-ignore
-import vegaImg from '../../assets/images/Projects/placeholder-images/vega-placeholder.jpg?project';
 // @ts-ignore
 import vertImg from '../../assets/images/Projects/placeholder-images/vert-placeholder.jpg?project';
 
@@ -56,19 +52,11 @@ const projects: Project[] = [
     link: '/project/lynx-apartments'
   },
   {
-    id: 'nairobi-club',
-    title: 'Nairobi Club Renovation',
-    description: 'Heritage building upgrade with modern MEP systems while preserving historical architecture and character.',
-    image: nairobiClubImg,
-    categories: ['Commercial'],
-    link: '/project/nairobi-club'
-  },
-  {
     id: 'ravine-dairies',
     title: 'Ravine Dairies Processing Plant',
     description: 'Specialized refrigeration and process piping systems for dairy processing facility with strict hygiene requirements.',
     image: ravineDairiesImg,
-    categories: ['Factory Planning'],
+    categories: ['Industrial'],
     link: '/project/ravine-dairies'
   },
   {
@@ -100,23 +88,15 @@ const projects: Project[] = [
     title: 'SC Johnson Manufacturing Plant',
     description: 'Complete turnkey MEP solution for consumer goods manufacturing facility with automated production line support.',
     image: scJohnsonImg,
-    categories: ['Design-Build', 'Industrial'],
+    categories: ['Industrial'],
     link: '/project/sc-johnson-facility'
-  },
-  {
-    id: 'vega-offices',
-    title: 'Vega Limited',
-    description: 'Modern office complex with sustainable MEP systems, smart building controls, and energy-efficient solutions.',
-    image: vegaImg,
-    categories: ['Industrial', 'Project Management'],
-    link: '/project/vega-offices'
   },
   {
     id: 'vert-processing',
     title: 'Vert Food and Vegetable Processing Factory',
     description: 'Complete MEP infrastructure for food processing facility including specialized refrigeration, ventilation, and process utilities.',
     image: vertImg,
-    categories: ['Project Management'],
+    categories: ['Industrial'],
     link: '/project/vert-processing'
   }
 ];
