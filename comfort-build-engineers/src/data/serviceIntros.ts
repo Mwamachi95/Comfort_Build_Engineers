@@ -14,7 +14,7 @@ import designBuildImage from '../assets/images/home/services/design-build.jpg?se
 // @ts-ignore
 import procurementSupportImage from '../assets/images/home/services/process-equipment.jpg?service';
 // @ts-ignore
-import riskManagementImage from '../assets/images/home/services/risk-matrix.png?service';
+import riskManagementImage from '../assets/images/home/services/risk-management.jpg?service';
 
 export const serviceIntros: ServiceIntroData[] = [
   {
