@@ -36,9 +36,9 @@ const Projects: React.FC = () => {
     <>
       <SEO
         title="Our Projects"
-        description="Explore Comfort Build Engineers' portfolio of successful MEP engineering projects across Kenya. From commercial buildings to industrial facilities, discover our expertise in mechanical, electrical, and plumbing solutions."
+        description="Explore Comfort Build Engineers' portfolio of successful MEP engineering projects across East Africa. From commercial buildings to industrial facilities, discover our expertise in mechanical, electrical, and plumbing solutions."
         canonicalUrl="/projects"
-        keywords="MEP projects Kenya, engineering portfolio, completed projects, commercial projects, industrial projects, Nairobi engineering projects"
+        keywords="MEP projects East Africa, engineering portfolio, completed projects, commercial projects, industrial projects, East Africa engineering projects"
       />
       <div className="min-h-screen bg-white">
         <ProjectsHero />

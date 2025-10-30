@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
             <div className="space-y-4">
               <p className="text-neutral-600 text-sm">
                 Professional engineering solutions for mechanical, electrical, plumbing services,
-                factory planning, and project management in Kenya.
+                factory planning, and project management in East Africa.
               </p>
               <div className="space-y-2">
                 <p className="text-xs text-neutral-500">

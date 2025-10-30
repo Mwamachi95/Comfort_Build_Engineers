@@ -52,7 +52,7 @@ export const services: Service[] = [
       {
         id: '6',
         title: 'Solar Heating Systems',
-        description: 'Renewable solar thermal technology harnessing Kenya\'s abundant sunshine to provide cost-effective water and space heating with minimal environmental impact.',
+        description: 'Renewable solar thermal technology harnessing East Africa\'s abundant sunshine to provide cost-effective water and space heating with minimal environmental impact.',
         position: { row: 1, col: 2 }
       }
     ]
@@ -334,7 +334,7 @@ export const services: Service[] = [
       {
         id: '5',
         title: 'Logistics & Import Coordination',
-        description: 'Complete management of shipping, customs clearance, import documentation, and delivery logistics ensuring equipment arrives safely, on schedule, and in compliance with Kenyan regulations.',
+        description: 'Complete management of shipping, customs clearance, import documentation, and delivery logistics ensuring equipment arrives safely, on schedule, and in compliance with East African regulations.',
         position: { row: 1, col: 1 }
       },
       {
@@ -364,7 +364,7 @@ export const services: Service[] = [
       {
         id: '2',
         title: 'Safety & Compliance Risk Management',
-        description: 'Identification and mitigation of workplace safety hazards, regulatory compliance gaps, and environmental risks ensuring adherence to Kenyan safety standards and industry best practices.',
+        description: 'Identification and mitigation of workplace safety hazards, regulatory compliance gaps, and environmental risks ensuring adherence to East African safety standards and industry best practices.',
         position: { row: 0, col: 1 }
       },
       {

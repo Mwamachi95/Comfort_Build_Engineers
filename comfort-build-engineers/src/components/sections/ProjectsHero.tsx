@@ -49,7 +49,7 @@ const ProjectsHero: FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              Explore our portfolio of successful engineering projects across Kenya. From commercial buildings to industrial facilities, we deliver solutions that stand the test of time.
+              Explore our portfolio of successful engineering projects across East Africa. From commercial buildings to industrial facilities, we deliver solutions that stand the test of time.
             </motion.p>
           </motion.div>
 

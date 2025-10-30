@@ -21,10 +21,10 @@ export const serviceIntros: ServiceIntroData[] = [
     serviceSlug: 'mechanical',
     heroImage: mechanicalImage,
     heroImageAlt: 'Mechanical Engineering Systems - HVAC and Building Automation',
-    tagline: 'Advanced mechanical systems engineering delivering optimal climate control, energy efficiency, and indoor air quality for commercial and industrial facilities across Kenya.',
+    tagline: 'Advanced mechanical systems engineering delivering optimal climate control, energy efficiency, and indoor air quality for commercial and industrial facilities across East Africa.',
     overview: {
       title: 'Overview',
-      content: 'Our mechanical engineering services encompass comprehensive HVAC system design, building automation solutions, and energy management systems. We specialize in creating comfortable, efficient environments through advanced heating, ventilation, air conditioning, and control technologies tailored to Kenya\'s unique climate and industrial requirements.',
+      content: 'Our mechanical engineering services encompass comprehensive HVAC system design, building automation solutions, and energy management systems. We specialize in creating comfortable, efficient environments through advanced heating, ventilation, air conditioning, and control technologies tailored to East Africa\'s unique climate and industrial requirements.',
     },
     approach: {
       title: 'Approach',
@@ -35,10 +35,10 @@ export const serviceIntros: ServiceIntroData[] = [
     serviceSlug: 'plumbing',
     heroImage: plumbingImage,
     heroImageAlt: 'Plumbing Services - Water Systems and Sanitary Solutions',
-    tagline: 'Comprehensive water systems and sanitary solutions ensuring reliability, safety, and compliance for every building we serve across Kenya\'s diverse infrastructure landscape.',
+    tagline: 'Comprehensive water systems and sanitary solutions ensuring reliability, safety, and compliance for every building we serve across East Africa\'s diverse infrastructure landscape.',
     overview: {
       title: 'Overview',
-      content: 'Our plumbing engineering services deliver complete water supply, drainage, and fire suppression systems for commercial, industrial, and residential projects. We design reliable plumbing infrastructure that meets Kenyan standards while incorporating water conservation technologies and sustainable practices to ensure long-term performance and resource efficiency.',
+      content: 'Our plumbing engineering services deliver complete water supply, drainage, and fire suppression systems for commercial, industrial, and residential projects. We design reliable plumbing infrastructure that meets East African standards while incorporating water conservation technologies and sustainable practices to ensure long-term performance and resource efficiency.',
     },
     approach: {
       title: 'Approach',
@@ -49,10 +49,10 @@ export const serviceIntros: ServiceIntroData[] = [
     serviceSlug: 'electrical',
     heroImage: electricalImage,
     heroImageAlt: 'Electrical Engineering - Power Distribution and Energy Management',
-    tagline: 'Safe, efficient electrical infrastructure powering Kenya\'s commercial and industrial growth through intelligent design, reliable distribution, and cutting-edge energy management solutions.',
+    tagline: 'Safe, efficient electrical infrastructure powering East Africa\'s commercial and industrial growth through intelligent design, reliable distribution, and cutting-edge energy management solutions.',
     overview: {
       title: 'Overview',
-      content: 'Our electrical engineering services encompass power distribution, lighting systems, emergency backup, and industrial controls for facilities of all scales. We design electrical infrastructure that ensures safety, maximizes energy efficiency, and supports operational continuity while adhering to Kenyan electrical codes and international best practices for modern buildings.',
+      content: 'Our electrical engineering services encompass power distribution, lighting systems, emergency backup, and industrial controls for facilities of all scales. We design electrical infrastructure that ensures safety, maximizes energy efficiency, and supports operational continuity while adhering to East African electrical codes and international best practices for modern buildings.',
     },
     approach: {
       title: 'Approach',
@@ -63,7 +63,7 @@ export const serviceIntros: ServiceIntroData[] = [
     serviceSlug: 'factory-planning',
     heroImage: factoryPlanningImage,
     heroImageAlt: 'Factory Planning - Industrial Facility Design and Optimization',
-    tagline: 'Strategic industrial facility design optimizing workflow, productivity, and safety to transform manufacturing operations across Kenya\'s growing industrial sector.',
+    tagline: 'Strategic industrial facility design optimizing workflow, productivity, and safety to transform manufacturing operations across East Africa\'s growing industrial sector.',
     overview: {
       title: 'Overview',
       content: 'Our factory planning services provide comprehensive facility layout design, process optimization, and utility infrastructure planning for manufacturing operations. We create efficient production environments that maximize space utilization, streamline material flow, and integrate essential MEP systems to support your industrial processes while ensuring worker safety and regulatory compliance.',

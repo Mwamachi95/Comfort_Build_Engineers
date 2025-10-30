@@ -23,7 +23,7 @@ const values: ValueCard[] = [
   {
     title: 'Consistent',
     icon: ConsistentIcon,
-    description: 'We deliver reliable, high-quality engineering solutions with consistent standards across all projects. Our commitment to precision and timely delivery has established us as Kenya\'s trusted building services partner.',
+    description: 'We deliver reliable, high-quality engineering solutions with consistent standards across all projects. Our commitment to precision and timely delivery has established us as East Africa\'s trusted building services partner.',
   },
 ];
 

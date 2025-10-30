@@ -130,7 +130,7 @@ const OurClients: FC = () => {
               Our Clients
             </span>
             <p className="text-lg md:text-xl text-neutral-600 leading-relaxed mt-4 max-w-3xl mx-auto">
-              Trusted engineering partnerships with Kenya's most innovative companies.
+              Trusted engineering partnerships with East Africa's most innovative companies.
             </p>
           </div>
 

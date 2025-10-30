@@ -73,9 +73,9 @@ const Services: React.FC = () => {
     <>
       <SEO
         title="Our Services"
-        description="Comprehensive MEP engineering solutions in Kenya. Explore our mechanical, electrical, plumbing, factory planning, cold chain, and industrial engineering services for industrial, commercial, and residential projects."
+        description="Comprehensive MEP engineering solutions in East Africa. Explore our mechanical, electrical, plumbing, factory planning, cold chain, and industrial engineering services for industrial, commercial, and residential projects."
         canonicalUrl="/services"
-        keywords="MEP services Kenya, mechanical engineering services, electrical engineering services, plumbing services, HVAC installation, industrial engineering, factory planning, cold chain solutions"
+        keywords="MEP services East Africa, mechanical engineering services, electrical engineering services, plumbing services, HVAC installation, industrial engineering, factory planning, cold chain solutions"
         structuredData={servicesSchema}
       />
       <div className="min-h-screen bg-white">
