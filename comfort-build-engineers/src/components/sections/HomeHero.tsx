@@ -85,44 +85,6 @@ const HomeHero: FC = () => {
           </motion.div>
         </motion.div>
       </div>
-
-      {/* Photo Attribution */}
-      <div className="absolute bottom-4 right-4 z-10">
-        <p className="text-xs text-white opacity-70">
-          Photo by{' '}
-          <a 
-            href="https://unsplash.com/@spacexuan?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="transition-colors duration-200 hover:opacity-100"
-            style={{ color: 'inherit' }}
-            onMouseEnter={(e) => {
-              (e.target as HTMLElement).style.color = '#A43D39';
-            }}
-            onMouseLeave={(e) => {
-              (e.target as HTMLElement).style.color = 'inherit';
-            }}
-          >
-            Crystal Kwok
-          </a>
-          {' '}on{' '}
-          <a 
-            href="https://unsplash.com/photos/grey-industrial-equipment-mhUsz2ezlXQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="transition-colors duration-200 hover:opacity-100"
-            style={{ color: 'inherit' }}
-            onMouseEnter={(e) => {
-              (e.target as HTMLElement).style.color = '#A43D39';
-            }}
-            onMouseLeave={(e) => {
-              (e.target as HTMLElement).style.color = 'inherit';
-            }}
-          >
-            Unsplash
-          </a>
-        </p>
-      </div>
     </section>
   );
 };

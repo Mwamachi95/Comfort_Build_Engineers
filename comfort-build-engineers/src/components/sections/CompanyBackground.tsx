@@ -41,29 +41,6 @@ const CompanyBackground: FC = () => {
           sizes="100vw"
         />
       </motion.div>
-      {/* Attribution */}
-      <div className="absolute bottom-2 right-2 sm:bottom-4 sm:right-4 z-10">
-        <p className="text-xs sm:text-xs text-white/80 bg-black/50 backdrop-blur-sm px-2 py-1 sm:px-3 sm:py-1 rounded">
-          Photo by{' '}
-          <a
-            href="https://unsplash.com/@spacexuan?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white/90 hover:text-white transition-colors duration-200 underline"
-          >
-            Crystal Kwok
-          </a>
-          {' '}on{' '}
-          <a
-            href="https://unsplash.com/photos/gray-commercial-machine-XUEdfpPIhXg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white/90 hover:text-white transition-colors duration-200 underline"
-          >
-            Unsplash
-          </a>
-        </p>
-      </div>
     </section>
   );
 };
