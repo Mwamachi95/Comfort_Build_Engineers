@@ -16,7 +16,7 @@ import origenImg from '../../assets/images/Projects/per-project/origen/origen-pl
 // @ts-ignore
 import ravineDairiesImg from '../../assets/images/Projects/placeholder-images/ravine-dairies.jpg?project';
 // @ts-ignore
-import rositaImg from '../../assets/images/Projects/placeholder-images/rosita-placeholder.jpeg?project';
+import rositaImg from '../../assets/images/Projects/placeholder-images/rosita-placeholder.jpg?project';
 // @ts-ignore
 import sanergyImg from '../../assets/images/Projects/placeholder-images/sanergy.jpg?project';
 // @ts-ignore

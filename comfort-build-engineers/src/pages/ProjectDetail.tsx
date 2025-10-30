@@ -118,7 +118,7 @@ import ravineDairiesImgMain from '../assets/images/Projects/per-project/ravine-d
 
 // Rosita Apartments images
 // @ts-ignore
-import rositaHero from '../assets/images/Projects/per-project/rosita/1.jpg?project';
+import rositaHero from '../assets/images/Projects/per-project/rosita/hero.jpg?project';
 // @ts-ignore
 import rositaImg2 from '../assets/images/Projects/per-project/rosita/2.jpg?project';
 // @ts-ignore
@@ -144,15 +144,15 @@ import sanergy1 from '../assets/images/Projects/per-project/sanergy/sanergy-1.jp
 // @ts-ignore
 import sanergy2 from '../assets/images/Projects/per-project/sanergy/sanergy-2.jpg?project';
 // @ts-ignore
-import sanergy3 from '../assets/images/Projects/per-project/sanergy/sanergy-3.jpeg?project';
+import sanergy3 from '../assets/images/Projects/per-project/sanergy/sanergy-3.jpg?project';
 // @ts-ignore
-import sanergy4 from '../assets/images/Projects/per-project/sanergy/sanergy-4.jpeg?project';
+import sanergy4 from '../assets/images/Projects/per-project/sanergy/sanergy-4.jpg?project';
 // @ts-ignore
-import sanergy5 from '../assets/images/Projects/per-project/sanergy/sanergy-5.jpeg?project';
+import sanergy5 from '../assets/images/Projects/per-project/sanergy/sanergy-5.jpg?project';
 // @ts-ignore
-import sanergy6 from '../assets/images/Projects/per-project/sanergy/sanergy-6.jpeg?project';
+import sanergy6 from '../assets/images/Projects/per-project/sanergy/sanergy-6.jpg?project';
 // @ts-ignore
-import sanergy7 from '../assets/images/Projects/per-project/sanergy/sanergy-7.jpeg?project';
+import sanergy7 from '../assets/images/Projects/per-project/sanergy/sanergy-7.jpg?project';
 // @ts-ignore
 import sanergy8 from '../assets/images/Projects/per-project/sanergy/sanergy-8.jpg?project';
 // @ts-ignore
