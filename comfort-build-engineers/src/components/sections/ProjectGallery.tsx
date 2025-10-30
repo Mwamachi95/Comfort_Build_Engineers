@@ -161,7 +161,7 @@ const ProjectGallery: FC<ProjectGalleryProps> = ({
             {/* Image */}
             <motion.div
               key={selectedImage}
-              className="max-w-full max-h-full"
+              className="max-w-[90vw] max-h-[90vh] flex items-center justify-center"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
@@ -171,9 +171,9 @@ const ProjectGallery: FC<ProjectGalleryProps> = ({
               <OptimizedImage
                 picture={images[selectedImage]}
                 alt={`${projectTitle} - Image ${selectedImage + 1}`}
-                className="max-w-full max-h-full object-contain"
+                className="max-w-full max-h-full w-auto h-auto object-contain"
                 loading="eager"
-                sizes="100vw"
+                sizes="90vw"
               />
             </motion.div>
 
