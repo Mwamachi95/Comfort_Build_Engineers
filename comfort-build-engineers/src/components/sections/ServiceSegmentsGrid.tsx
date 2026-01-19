@@ -315,14 +315,14 @@ const ServiceSegmentsGrid: React.FC<ServiceSegmentsGridProps> = ({ service }) =>
                   className="overflow-hidden mt-auto absolute bottom-4 left-4 right-14 lg:bottom-5 lg:left-6 lg:right-16 max-w-[calc(100%-3.5rem)] lg:max-w-[calc(100%-4rem)]"
                   animate={{
                     opacity: isHovered ? 1 : 0,
-                    maxHeight: isHovered ? '100px' : '0px',
+                    maxHeight: isHovered ? (screenWidth >= 1024 ? '120px' : '100px') : '0px',
                   }}
                   transition={{
                     opacity: { duration: 0.3, ease: 'easeInOut', delay: isHovered ? 0.1 : 0 },
                     maxHeight: { duration: 0.4, ease: 'easeInOut' },
                   }}
                 >
-                  <p 
+                  <p
                     className="text-xs md:text-xs lg:text-sm leading-relaxed m-0"
                     style={{ color: getIconAreaColor(service.color) }}
                   >
@@ -333,7 +333,7 @@ const ServiceSegmentsGrid: React.FC<ServiceSegmentsGridProps> = ({ service }) =>
             );
           })}
         </motion.div>
-        
+
         {/* Bottom Row */}
         <motion.div 
           className="grid overflow-visible relative grid-cols-1 md:grid-cols-3"
@@ -445,14 +445,14 @@ const ServiceSegmentsGrid: React.FC<ServiceSegmentsGridProps> = ({ service }) =>
                   className="overflow-hidden mt-auto absolute bottom-4 left-4 right-14 lg:bottom-5 lg:left-6 lg:right-16 max-w-[calc(100%-3.5rem)] lg:max-w-[calc(100%-4rem)]"
                   animate={{
                     opacity: isHovered ? 1 : 0,
-                    maxHeight: isHovered ? '100px' : '0px',
+                    maxHeight: isHovered ? (screenWidth >= 1024 ? '120px' : '100px') : '0px',
                   }}
                   transition={{
                     opacity: { duration: 0.3, ease: 'easeInOut', delay: isHovered ? 0.1 : 0 },
                     maxHeight: { duration: 0.4, ease: 'easeInOut' },
                   }}
                 >
-                  <p 
+                  <p
                     className="text-xs md:text-xs lg:text-sm leading-relaxed m-0"
                     style={{ color: getIconAreaColor(service.color) }}
                   >
