@@ -165,26 +165,26 @@ export const services: Service[] = [
     segments: [
       {
         id: '1',
-        title: 'Layout Design & Optimization',
-        description: 'Efficient factory floor planning and workflow optimization for maximum productivity.',
+        title: 'Site Master Planning',
+        description: 'Integrated layouts, logistics planning, utility coordination, and workforce provisioning tied to market dynamics and financing strategies for orderly, scalable site development.',
         position: { row: 0, col: 0 }
       },
       {
         id: '2',
-        title: 'Process Engineering',
-        description: 'Manufacturing process design, equipment specification, and production line planning.',
+        title: 'Layout Design & Optimization',
+        description: 'Factory floor layouts and workflow optimization for maximum productivity across project phases in alignment with the master plan.',
         position: { row: 0, col: 1 }
       },
       {
         id: '3',
-        title: 'Utility Infrastructure',
-        description: 'Industrial power, compressed air, steam, and process water distribution systems.',
+        title: 'Process Engineering',
+        description: 'Manufacturing process design, equipment specification, and production line planning.',
         position: { row: 0, col: 2 }
       },
       {
         id: '4',
-        title: 'Material Handling Systems',
-        description: 'Conveyor systems, automated storage, and material flow optimization.',
+        title: 'Utility Infrastructure',
+        description: 'Industrial power, compressed air, steam, and process water distribution systems.',
         position: { row: 1, col: 0 }
       },
       {
@@ -310,37 +310,37 @@ export const services: Service[] = [
       {
         id: '1',
         title: 'Equipment Specification Development',
-        description: 'Comprehensive technical specifications defining performance requirements, capacity needs, and compatibility criteria ensuring equipment procurement aligns with operational goals and facility constraints.',
+        description: 'Performance requirements, capacity criteria, and compatibility specifications for accurate equipment procurement.',
         position: { row: 0, col: 0 }
       },
       {
         id: '2',
         title: 'Supplier Identification & Qualification',
-        description: 'Strategic sourcing and vetting of equipment manufacturers and suppliers worldwide, evaluating reputation, technical capabilities, warranty support, and after-sales service reliability.',
+        description: 'Global sourcing and vetting of manufacturers based on capability, reputation, warranty, and service reliability.',
         position: { row: 0, col: 1 }
       },
       {
         id: '3',
         title: 'Technical Bid Evaluation',
-        description: 'Detailed analysis and comparison of equipment proposals assessing technical compliance, performance specifications, energy efficiency, maintenance requirements, and total cost of ownership.',
+        description: 'Comparative analysis of proposals for technical compliance, performance, efficiency, maintenance, and total ownership cost.',
         position: { row: 0, col: 2 }
       },
       {
         id: '4',
-        title: 'Factory Acceptance Testing (FAT)',
-        description: 'On-site equipment inspection and performance verification at manufacturer facilities ensuring machinery meets specifications, quality standards, and operational requirements before shipment.',
+        title: 'Contracting Support',
+        description: 'Clear SOWs, milestone-linked payment terms, risk-management clauses, and complete technical annexes for precise agreements.',
         position: { row: 1, col: 0 }
       },
       {
         id: '5',
-        title: 'Logistics & Import Coordination',
-        description: 'Complete management of shipping, customs clearance, import documentation, and delivery logistics ensuring equipment arrives safely, on schedule, and in compliance with East African regulations.',
+        title: 'Design/Construction Validation',
+        description: 'Client-alignment checks, simulations and FAT support, site verification, stakeholder sign-off, and essential validation documentation.',
         position: { row: 1, col: 1 }
       },
       {
         id: '6',
         title: 'Installation Supervision & Commissioning Support',
-        description: 'Technical oversight during equipment installation, startup, and performance testing ensuring proper integration with facility systems and achieving specified operational performance.',
+        description: 'Technical oversight of installation, startup, system integration, and performance testing to meet operational requirements.',
         position: { row: 1, col: 2 }
       }
     ]
@@ -358,37 +358,37 @@ export const services: Service[] = [
       {
         id: '1',
         title: 'Project Risk Assessment & Analysis',
-        description: 'Systematic evaluation of potential technical, schedule, cost, and quality risks during project planning and execution phases, prioritizing threats based on likelihood and impact severity.',
+        description: 'Evaluation of technical, schedule, cost, and quality risks with prioritization by likelihood and impact.',
         position: { row: 0, col: 0 }
       },
       {
         id: '2',
         title: 'Safety & Compliance Risk Management',
-        description: 'Identification and mitigation of workplace safety hazards, regulatory compliance gaps, and environmental risks ensuring adherence to East African safety standards and industry best practices.',
+        description: 'Identification and mitigation of safety hazards, regulatory gaps, and environmental risks.',
         position: { row: 0, col: 1 }
       },
       {
         id: '3',
         title: 'Contractual & Legal Risk Evaluation',
-        description: 'Analysis of contract terms, liability exposures, dispute potential, and legal obligations protecting client interests and minimizing contractual disputes in MEP project agreements.',
+        description: 'Analysis of contract terms, liabilities, and legal obligations to protect client interests.',
         position: { row: 0, col: 2 }
       },
       {
         id: '4',
         title: 'Financial Risk Mitigation',
-        description: 'Assessment and management of budget risks, cost escalation factors, payment terms, and financial exposure developing strategies to control costs and protect project financial viability.',
+        description: 'Assessment and control of budget risks, cost escalation, and payment exposures.',
         position: { row: 1, col: 0 }
       },
       {
         id: '5',
         title: 'Technical Risk & Design Review',
-        description: 'Critical evaluation of design assumptions, system specifications, equipment selections, and technical dependencies identifying potential failure points and engineering vulnerabilities.',
+        description: 'Evaluation of design assumptions, specifications, equipment, and technical dependencies for vulnerabilities.',
         position: { row: 1, col: 1 }
       },
       {
         id: '6',
         title: 'Business Continuity & Operational Risk Planning',
-        description: 'Development of contingency plans, backup systems, and emergency response protocols ensuring facility operations continue despite equipment failures, supply disruptions, or unforeseen events.',
+        description: 'Development of contingency plans, backup systems, and emergency protocols for uninterrupted operations.',
         position: { row: 1, col: 2 }
       }
     ]
