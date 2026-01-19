@@ -2,7 +2,6 @@ import React from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import ProjectHero from '../components/sections/ProjectHero';
 import ProjectDescription from '../components/sections/ProjectDescription';
-import ServicesOverview from '../components/sections/ServicesOverview';
 import ProjectGallery from '../components/sections/ProjectGallery';
 
 // Import project images with optimization
@@ -682,11 +681,6 @@ const ProjectDetail: React.FC = () => {
         description={project.description}
         image={project.descriptionImage}
         imageAlt={`${project.title} - Project Details`}
-      />
-
-      <ServicesOverview
-        services={project.services}
-        scope={project.scope}
       />
 
       <ProjectGallery
